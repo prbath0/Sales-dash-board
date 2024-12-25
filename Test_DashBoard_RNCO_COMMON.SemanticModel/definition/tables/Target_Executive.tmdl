@@ -1,0 +1,500 @@
+table Target_Executive
+	lineageTag: bec96d44-ed71-4ace-9850-9db5effb0912
+
+	column RecID
+		dataType: int64
+		formatString: 0
+		lineageTag: aa7d123d-d203-43da-b2d6-2a3599029919
+		summarizeBy: count
+		sourceColumn: RecID
+
+		annotation SummarizationSetBy = Automatic
+
+	column BusinessUnit
+		dataType: string
+		lineageTag: ee4abf02-40a3-43bc-96f3-2851d899c81b
+		summarizeBy: none
+		sourceColumn: BusinessUnit
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: c7bc742a-e224-44f8-8053-a134faad9166
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Period
+		dataType: int64
+		formatString: 0
+		lineageTag: 5432a26d-e448-4240-be52-d260dc9af9a7
+		summarizeBy: sum
+		sourceColumn: Period
+
+		annotation SummarizationSetBy = Automatic
+
+	column Week
+		dataType: int64
+		formatString: 0
+		lineageTag: 4088f9ad-9e71-4de8-9bff-bcb46758a2c7
+		summarizeBy: sum
+		sourceColumn: Week
+
+		annotation SummarizationSetBy = Automatic
+
+	column ExecutiveCode
+		dataType: string
+		lineageTag: dc7d88d5-d35d-490b-aa0a-fa073e13deae
+		summarizeBy: none
+		sourceColumn: ExecutiveCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductCode
+		dataType: string
+		lineageTag: d36ae19c-6eeb-4456-93a2-01819056fc75
+		summarizeBy: none
+		sourceColumn: ProductCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column RDSalesTargetQty
+		dataType: double
+		lineageTag: 9d3871de-4621-4109-8521-bdf01211bf12
+		summarizeBy: sum
+		sourceColumn: RDSalesTargetQty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RDSalesTargetVolume
+		dataType: double
+		lineageTag: 8176e63b-d741-4c4f-a9c8-8aaa2043b970
+		summarizeBy: sum
+		sourceColumn: RDSalesTargetVolume
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RDSalesTargetValue
+		dataType: double
+		lineageTag: 6a93547a-c5c1-4b7e-9410-60d624f29c53
+		summarizeBy: sum
+		sourceColumn: RDSalesTargetValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RDSalesAcheivedQty
+		dataType: double
+		lineageTag: df580afe-ebb8-4e6b-befb-54a2f08fd757
+		summarizeBy: sum
+		sourceColumn: RDSalesAcheivedQty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RDSalesAcheivedVolume
+		dataType: double
+		lineageTag: d12356f4-08e1-4421-8c39-c9dc8edf1429
+		summarizeBy: sum
+		sourceColumn: RDSalesAcheivedVolume
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RDSalesAcheivedValue
+		dataType: double
+		lineageTag: 50916603-3686-40b9-a38e-a076a932498d
+		summarizeBy: sum
+		sourceColumn: RDSalesAcheivedValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CreatedOn
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: da66bfd0-201e-4f37-ad49-118858837536
+		summarizeBy: none
+		sourceColumn: CreatedOn
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column UpdatedOn
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: a4af0e21-9354-4561-b8e1-a5e75e5bf371
+		summarizeBy: none
+		sourceColumn: UpdatedOn
+
+		variation Variation
+			isDefault
+			relationship: cbc81b4d-66c7-4d78-b7d1-854c23aeff21
+			defaultHierarchy: LocalDateTable_e06cdb95-2193-4707-b78e-869858232dc4.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column RDSalesReturnValue
+		dataType: double
+		lineageTag: 57e71910-2ffb-4486-9b72-a2b7bc01458b
+		summarizeBy: sum
+		sourceColumn: RDSalesReturnValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RDSalesReturnVolume
+		dataType: double
+		lineageTag: 8ebf64cd-06ae-46b0-b766-3ea41527b75d
+		summarizeBy: sum
+		sourceColumn: RDSalesReturnVolume
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RDSalesReturnQty
+		dataType: double
+		lineageTag: 8946065f-a99f-4fe6-b1a4-699ee1e6d487
+		summarizeBy: sum
+		sourceColumn: RDSalesReturnQty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RDSalesAcheivedGrossValue
+		dataType: double
+		lineageTag: dd3eaf57-136d-4fda-ad40-7b8d58505160
+		summarizeBy: sum
+		sourceColumn: RDSalesAcheivedGrossValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AdjustmentQty
+		dataType: double
+		lineageTag: 7679fcad-5297-40f7-85fd-bce4405b7322
+		summarizeBy: sum
+		sourceColumn: AdjustmentQty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RDNetSalesQty
+		dataType: double
+		lineageTag: b1c848f6-833f-4e7d-99fe-b087a0f1d791
+		summarizeBy: sum
+		sourceColumn: RDNetSalesQty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RDNetSalesValue
+		dataType: double
+		lineageTag: 47894f23-a050-4711-b64d-562f981e5343
+		summarizeBy: sum
+		sourceColumn: RDNetSalesValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RDNetSalesVolume
+		dataType: double
+		lineageTag: 99b1b1a1-4920-4950-ad62-4238865d0500
+		summarizeBy: sum
+		sourceColumn: RDNetSalesVolume
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RDGrossSalesValue
+		dataType: double
+		lineageTag: e8011e79-5faf-422c-88a0-98eb3bd79969
+		summarizeBy: sum
+		sourceColumn: RDGrossSalesValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RDGrossReturnValue
+		dataType: double
+		lineageTag: 96862f65-240a-4b82-97f5-9d7cf856915d
+		summarizeBy: sum
+		sourceColumn: RDGrossReturnValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RDSalesCostValue
+		dataType: double
+		lineageTag: 5502e723-5908-4461-8d8b-1f4060ae2677
+		summarizeBy: sum
+		sourceColumn: RDSalesCostValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RDReturnCostValue
+		dataType: double
+		lineageTag: fc773f74-8239-436d-8bef-a80fd2bba34f
+		summarizeBy: sum
+		sourceColumn: RDReturnCostValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PeriodCancelledQty
+		dataType: double
+		lineageTag: 148435fc-1066-4e1c-83e2-00ba878ecf36
+		summarizeBy: sum
+		sourceColumn: PeriodCancelledQty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PeriodCancelledValue
+		dataType: double
+		lineageTag: 1c607244-29f4-48ad-bbd6-59998608f134
+		summarizeBy: sum
+		sourceColumn: PeriodCancelledValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NonSelableReturnQty
+		dataType: double
+		lineageTag: 76917a40-c7c5-44b7-ae73-fbaa3b70e4d3
+		summarizeBy: sum
+		sourceColumn: NonSelableReturnQty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NonSelableReturnValue
+		dataType: double
+		lineageTag: 6fef5f80-56c4-49b7-9ffd-ec5f69d4d6f8
+		summarizeBy: sum
+		sourceColumn: NonSelableReturnValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NonSelableReturnVolume
+		dataType: double
+		lineageTag: 481be80b-7ec8-4e3d-8d27-64bd81ef8f1c
+		summarizeBy: sum
+		sourceColumn: NonSelableReturnVolume
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SelableReturnQty
+		dataType: double
+		lineageTag: 76ec4b88-7652-4a5d-b412-e0fcb2c6d051
+		summarizeBy: sum
+		sourceColumn: SelableReturnQty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SelableReturnValue
+		dataType: double
+		lineageTag: 1e4b47e1-125c-439f-8ccc-8cf2dba61cf2
+		summarizeBy: sum
+		sourceColumn: SelableReturnValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SelableReturnVolume
+		dataType: double
+		lineageTag: 87dda587-7f4a-416f-984c-e9ff308b31b1
+		summarizeBy: sum
+		sourceColumn: SelableReturnVolume
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FreeQty
+		dataType: double
+		lineageTag: 8f2de403-df69-4238-a4c1-a59a0bbe9f07
+		summarizeBy: sum
+		sourceColumn: FreeQty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FreeVolume
+		dataType: double
+		lineageTag: 2a699e09-7d09-45d7-bbe1-d47a6c78f851
+		summarizeBy: sum
+		sourceColumn: FreeVolume
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FreeValue
+		dataType: double
+		lineageTag: 71417eaf-b4cd-422a-a386-086f25c7fcd8
+		summarizeBy: sum
+		sourceColumn: FreeValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ReturnFreeQty
+		dataType: double
+		lineageTag: 5294c950-3a09-47e8-a3e2-73e15c93ed7f
+		summarizeBy: sum
+		sourceColumn: ReturnFreeQty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ReturnFreeVolume
+		dataType: double
+		lineageTag: 7be5dff6-939c-4f82-be9a-b1f2f83fe9b1
+		summarizeBy: sum
+		sourceColumn: ReturnFreeVolume
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ReturnFreeValue
+		dataType: double
+		lineageTag: f0a50b34-6fde-40c8-b9eb-8df7cde57e3d
+		summarizeBy: sum
+		sourceColumn: ReturnFreeValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SalesDiscountValue
+		dataType: double
+		lineageTag: 75e5719a-55b7-493a-9d74-91d6d037538b
+		summarizeBy: sum
+		sourceColumn: SalesDiscountValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ReturnDiscountValue
+		dataType: double
+		lineageTag: 7d16b9b2-13cc-4b29-991c-cf9eeeacdb72
+		summarizeBy: sum
+		sourceColumn: ReturnDiscountValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ExecutiveName
+		dataType: string
+		lineageTag: 72c2b86d-7416-4588-8987-d091cdba8b95
+		summarizeBy: none
+		sourceColumn: ExecutiveName
+
+		annotation SummarizationSetBy = Automatic
+
+	column PrimaryTerritoryCode
+		dataType: string
+		lineageTag: 7a3dcab2-8c6e-418c-9c4b-5c2857d51aee
+		summarizeBy: none
+		sourceColumn: PrimaryTerritoryCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Province
+		dataType: string
+		lineageTag: 302f55d9-2b54-48aa-9a87-286487b5ee43
+		summarizeBy: none
+		sourceColumn: Province
+
+		annotation SummarizationSetBy = Automatic
+
+	column District
+		dataType: string
+		lineageTag: 5733a03b-f8c8-43fa-b41a-372860bdb5a8
+		summarizeBy: none
+		sourceColumn: District
+
+		annotation SummarizationSetBy = Automatic
+
+	column Territory_Name
+		dataType: string
+		lineageTag: fab02e6c-edce-4096-87a4-2bfe8343d74c
+		summarizeBy: none
+		sourceColumn: Territory_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Area
+		dataType: string
+		lineageTag: 7cc332e5-ce58-40f2-802f-c6cc00be4035
+		summarizeBy: none
+		sourceColumn: Area
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Target_Executive = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("202.124.186.120", "XONTVenturaUserSNWA", [Query="SELECT #(lf)       [RecID]#(lf)      ,[BusinessUnit]#(lf)      ,[Year]#(lf)      ,[Period]#(lf)      ,[Week]#(lf)      ,[ExecutiveCode]#(lf)      ,[ProductCode]#(lf)      ,[RDSalesTargetQty]#(lf)      ,[RDSalesTargetVolume]#(lf)      ,[RDSalesTargetValue]#(lf)      ,[RDSalesAcheivedQty]#(lf)      ,[RDSalesAcheivedVolume]#(lf)      ,[RDSalesAcheivedValue]#(lf)      ,[CreatedBy]#(lf)      ,[CreatedOn]#(lf)      ,[UpdatedBy]#(lf)      ,[UpdatedOn]#(lf)      ,[TimeStamp]#(lf)      ,[RDSalesReturnValue]#(lf)      ,[RDSalesReturnVolume]#(lf)      ,[RDSalesReturnQty]#(lf)      ,[RDSalesAcheivedGrossValue]#(lf)      ,[AdjustmentQty]#(lf)      ,[RDNetSalesQty]#(lf)      ,[RDNetSalesValue]#(lf)      ,[RDNetSalesVolume]#(lf)      ,[RDGrossSalesValue]#(lf)      ,[RDGrossReturnValue]#(lf)      ,[RDSalesCostValue]#(lf)      ,[RDReturnCostValue]#(lf)      ,[PeriodCancelledQty]#(lf)      ,[PeriodCancelledValue]#(lf)      ,[NonSelableReturnQty]#(lf)      ,[NonSelableReturnValue]#(lf)      ,[NonSelableReturnVolume]#(lf)      ,[SelableReturnQty]#(lf)      ,[SelableReturnValue]#(lf)      ,[SelableReturnVolume]#(lf)      ,[FreeQty]#(lf)      ,[FreeVolume]#(lf)      ,[FreeValue]#(lf)      ,[ReturnFreeQty]#(lf)      ,[ReturnFreeVolume]#(lf)      ,[ReturnFreeValue]#(lf)      ,[SalesDiscountValue]#(lf)      ,[ReturnDiscountValue]#(lf)  FROM [XONTVenturaUserSNWA].[RD].[TargetExecutive]#(lf)", HierarchicalNavigation=true, MultiSubnetFailover=true]),
+				    #"Merged Queries" = Table.NestedJoin(Source, {"ExecutiveCode"}, Master_Executive_Details, {"ExecutiveCode"}, "Master_Executive_Details", JoinKind.LeftOuter),
+				    #"Expanded Master_Executive_Details" = Table.ExpandTableColumn(#"Merged Queries", "Master_Executive_Details", {"ExecutiveName", "PrimaryTerritoryCode", "Province", "District", "Territory"}, {"Master_Executive_Details.ExecutiveName", "Master_Executive_Details.PrimaryTerritoryCode", "Master_Executive_Details.Province", "Master_Executive_Details.District", "Master_Executive_Details.Territory"}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Expanded Master_Executive_Details",{"TimeStamp"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns",{{"Master_Executive_Details.ExecutiveName", "ExecutiveName"}, {"Master_Executive_Details.PrimaryTerritoryCode", "PrimaryTerritoryCode"}, {"Master_Executive_Details.Province", "Province"}, {"Master_Executive_Details.District", "District"}, {"Master_Executive_Details.Territory", "Territory_Name"}}),
+				    #"Changed date type" = Table.TransformColumnTypes(#"Renamed Columns",{{"CreatedOn", type date}, {"UpdatedOn", type date}}),
+				    #"Merged Queries1" = Table.NestedJoin(#"Changed date type", {"ExecutiveCode"}, Master_Executive_Details, {"ExecutiveCode"}, "Master_Executive_Details", JoinKind.LeftOuter),
+				    #"Expanded Master_Executive_Details1" = Table.ExpandTableColumn(#"Merged Queries1", "Master_Executive_Details", {"Area"}, {"Master_Executive_Details.Area"}),
+				    #"Removed Columns1" = Table.RemoveColumns(#"Expanded Master_Executive_Details1",{"CreatedBy", "UpdatedBy"}),
+				    #"Filtered Rows" = Table.SelectRows(#"Removed Columns1", each ([Year] = 2022 or [Year] = 2023 or [Year] = 2024)),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Filtered Rows",{{"Master_Executive_Details.Area", "Area"}})
+				in
+				    #"Renamed Columns1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

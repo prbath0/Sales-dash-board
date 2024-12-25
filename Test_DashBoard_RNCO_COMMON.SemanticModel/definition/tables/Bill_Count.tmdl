@@ -1,0 +1,355 @@
+table Bill_Count
+	lineageTag: c38e339a-915a-422e-942a-6cac51dbbee7
+
+	column RecID
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 822c218a-3926-47b6-9fb9-82d69411b2d7
+		summarizeBy: count
+		sourceColumn: RecID
+
+		annotation SummarizationSetBy = Automatic
+
+	column BusinessUnit
+		dataType: string
+		isNullable: false
+		sourceProviderType: char
+		lineageTag: 384d5f49-4a83-43c6-ac5f-a11abf910515
+		summarizeBy: none
+		sourceColumn: BusinessUnit
+
+		annotation SummarizationSetBy = Automatic
+
+	column TerritoryCode
+		dataType: string
+		isNullable: false
+		sourceProviderType: char
+		lineageTag: 69cf97a3-1ce6-4880-9b74-dbd103696946
+		summarizeBy: none
+		sourceColumn: TerritoryCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ExecutiveCode
+		dataType: string
+		isNullable: false
+		sourceProviderType: char
+		lineageTag: e3c52a36-7ee9-4803-b059-bcc493ce8e14
+		summarizeBy: none
+		sourceColumn: ExecutiveCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column RetailerCode
+		dataType: string
+		isNullable: false
+		sourceProviderType: varchar(15)
+		lineageTag: 57a1e439-eeb6-4b19-9d63-c615a79f97ea
+		summarizeBy: none
+		sourceColumn: RetailerCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column InvoiceDate
+		dataType: dateTime
+		isNullable: false
+		formatString: General Date
+		sourceProviderType: datetime
+		lineageTag: 7e076cb5-49d0-44d4-b0fd-2b8b6bcd3b68
+		summarizeBy: none
+		sourceColumn: InvoiceDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductCode
+		dataType: string
+		isNullable: false
+		sourceProviderType: varchar(24)
+		lineageTag: 71afe79e-b534-4515-ae07-3f385db8a7e4
+		summarizeBy: none
+		sourceColumn: ProductCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column U1MovementQuantity
+		dataType: double
+		isNullable: false
+		sourceProviderType: decimal(15, 4)
+		lineageTag: e5a9853a-ec3d-4747-b4d8-70b71ddc5ee2
+		summarizeBy: sum
+		sourceColumn: U1MovementQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column U2MovementQuantity
+		dataType: double
+		isNullable: false
+		sourceProviderType: decimal(15, 4)
+		lineageTag: 9fa3569e-0c1d-4079-ae18-9ddbfbe57e99
+		summarizeBy: sum
+		sourceColumn: U2MovementQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Price
+		dataType: double
+		isNullable: false
+		sourceProviderType: decimal(15, 4)
+		lineageTag: 666bf3e8-9398-410f-91ac-e32c5e77dcdb
+		summarizeBy: sum
+		sourceColumn: Price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ConversionRate
+		dataType: double
+		isNullable: false
+		sourceProviderType: decimal(30, 25)
+		lineageTag: c5c6e8ea-0520-422d-bfe8-bf7b8c2a3685
+		summarizeBy: sum
+		sourceColumn: ConversionRate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Status
+		dataType: string
+		isNullable: false
+		sourceProviderType: char
+		lineageTag: 3a13abad-7860-46e8-9457-04b2ff170c59
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column GoodsValue
+		dataType: double
+		isNullable: false
+		sourceProviderType: decimal(15, 4)
+		lineageTag: f76f5164-c8f9-496f-be0e-6781b2542301
+		summarizeBy: sum
+		sourceColumn: GoodsValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LineDiscountValue
+		dataType: double
+		isNullable: false
+		sourceProviderType: decimal(15, 4)
+		lineageTag: 5b84fb20-df83-4ee8-8048-24d5e36fa151
+		summarizeBy: sum
+		sourceColumn: LineDiscountValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column InvoiceValue
+		dataType: double
+		isNullable: false
+		sourceProviderType: decimal(15, 4)
+		lineageTag: ee2ad064-7812-42ca-a1a9-e2f841df842c
+		summarizeBy: sum
+		sourceColumn: InvoiceValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DiscountQty
+		dataType: double
+		isNullable: false
+		sourceProviderType: decimal(15, 4)
+		lineageTag: f006a5a5-acee-4ecf-b3f3-6baa9ffed50e
+		summarizeBy: sum
+		sourceColumn: DiscountQty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DiscountedProductCode
+		dataType: string
+		isNullable: false
+		sourceProviderType: varchar(24)
+		lineageTag: 2d0ec734-00cb-4197-b459-eee33b9a5b70
+		summarizeBy: none
+		sourceColumn: DiscountedProductCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column GoodsValueCur
+		dataType: double
+		isNullable: false
+		sourceProviderType: decimal(15, 4)
+		lineageTag: 38906b3f-1318-40c7-a60a-67b7f1e443b3
+		summarizeBy: sum
+		sourceColumn: GoodsValueCur
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CreatedOn
+		dataType: dateTime
+		isNullable: false
+		formatString: General Date
+		sourceProviderType: datetime
+		lineageTag: 9404acd1-ea9b-4be7-aaaf-5cea5af36749
+		summarizeBy: none
+		sourceColumn: CreatedOn
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedOn
+		dataType: dateTime
+		isNullable: false
+		formatString: General Date
+		sourceProviderType: datetime
+		lineageTag: 4a2939e7-25e5-4877-a867-b33c3bde1b66
+		summarizeBy: none
+		sourceColumn: UpdatedOn
+
+		annotation SummarizationSetBy = Automatic
+
+	column UploadedOn
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime
+		lineageTag: bb4ac823-877a-453f-be1f-96cc09d13749
+		summarizeBy: none
+		sourceColumn: UploadedOn
+
+		annotation SummarizationSetBy = Automatic
+
+	column InvoiceLineStartTime
+		dataType: dateTime
+		isNullable: false
+		formatString: General Date
+		sourceProviderType: datetime
+		lineageTag: 92b674cf-68bc-4416-967f-0b9f837ca8e4
+		summarizeBy: none
+		sourceColumn: InvoiceLineStartTime
+
+		annotation SummarizationSetBy = Automatic
+
+	column InvoiceLineEndTime
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime
+		lineageTag: b8eaeab7-a68e-4533-bd6c-68d1043b2948
+		summarizeBy: none
+		sourceColumn: InvoiceLineEndTime
+
+		annotation SummarizationSetBy = Automatic
+
+	column StockTerritory
+		dataType: string
+		isNullable: false
+		sourceProviderType: char
+		lineageTag: 77c6d59d-bebd-4eeb-b1c7-88fb5874686b
+		summarizeBy: none
+		sourceColumn: StockTerritory
+
+		annotation SummarizationSetBy = Automatic
+
+	column OriginalPrice
+		dataType: double
+		isNullable: false
+		sourceProviderType: decimal(15, 4)
+		lineageTag: a4938e19-861b-4c33-9518-6ff97b10b1b2
+		summarizeBy: sum
+		sourceColumn: OriginalPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PDAInvoiceNo
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 9ff99b1b-7abc-43d0-95b8-e44d8f1a2fae
+		summarizeBy: sum
+		sourceColumn: PDAInvoiceNo
+
+		annotation SummarizationSetBy = Automatic
+
+	column PDASalesCategoryCode
+		dataType: string
+		isNullable: false
+		sourceProviderType: char
+		lineageTag: 0ffe99e2-8711-4c95-8559-9e6a376e3b5f
+		summarizeBy: none
+		sourceColumn: PDASalesCategoryCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Volume
+		dataType: double
+		isNullable: false
+		sourceProviderType: decimal(15, 4)
+		lineageTag: 9e5417cf-7004-4631-8178-487d29f89606
+		summarizeBy: sum
+		sourceColumn: Volume
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MRPPrice
+		dataType: double
+		isNullable: false
+		sourceProviderType: decimal(15, 4)
+		lineageTag: ac87df9b-52b5-4ea4-a74d-3b0ee20fa9ed
+		summarizeBy: sum
+		sourceColumn: MRPPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MRPPriceGroup
+		dataType: string
+		isNullable: false
+		sourceProviderType: char
+		lineageTag: 01046fce-2d3f-49e6-aee0-8009221201a4
+		summarizeBy: none
+		sourceColumn: MRPPriceGroup
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalBillCount
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: fb2f850f-ef69-4885-9aea-fbde526138f3
+		summarizeBy: sum
+		sourceColumn: TotalBillCount
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Bill_Count = m
+		mode: directQuery
+		source =
+				let
+				    Source = Sql.Database("202.124.186.120", "XONTVenturaUserSNWA", [Query="SELECT #(lf)      [RecID],#(lf)      [BusinessUnit],#(lf)      [TerritoryCode],#(lf)      [ExecutiveCode],#(lf)      [RetailerCode],#(lf)      [InvoiceDate],#(lf)      [ProductCode],#(lf)      [U1MovementQuantity],#(lf)      [U2MovementQuantity],#(lf)      [Price],#(lf)      [ConversionRate],#(lf)      [Status],#(lf)      [GoodsValue],#(lf)      [LineDiscountValue],#(lf)      [InvoiceValue],#(lf)      [DiscountQty],#(lf)      [DiscountedProductCode],#(lf)      [GoodsValueCur],#(lf)      [CreatedOn],#(lf)      [UpdatedOn],#(lf)      [UploadedOn],#(lf)      [InvoiceLineStartTime],#(lf)      [InvoiceLineEndTime],#(lf)#(tab)  [StockTerritory],#(lf)      [OriginalPrice],#(lf)      [PDAInvoiceNo],#(lf)      [PDASalesCategoryCode],#(lf)      [Volume],#(lf)      [MRPPrice],#(lf)      [MRPPriceGroup],#(lf)      COUNT(*) OVER (PARTITION BY [InvoiceDate], [ProductCode], [RetailerCode]) AS [TotalBillCount]#(lf)FROM [XONTVenturaUserSNWA].[RD].[SalesInvoiceLine]#(lf)Where #(lf)InvoiceDate > '2023-12-31'#(lf)#(lf)", HierarchicalNavigation=true, MultiSubnetFailover=true])
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

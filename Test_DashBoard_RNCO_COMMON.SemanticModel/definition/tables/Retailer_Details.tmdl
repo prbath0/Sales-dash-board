@@ -1,0 +1,1003 @@
+table Retailer_Details
+	lineageTag: 072935ba-4cbd-4ccc-9284-2019134f7e47
+
+	column RecordID
+		dataType: int64
+		formatString: 0
+		lineageTag: da3adb80-9972-4781-a598-1b5c7f152bbb
+		summarizeBy: count
+		sourceColumn: RecordID
+
+		annotation SummarizationSetBy = Automatic
+
+	column BusinessUnit
+		dataType: string
+		lineageTag: b6e3ae06-8420-47b5-9cde-bf10fc666f19
+		summarizeBy: none
+		sourceColumn: BusinessUnit
+
+		annotation SummarizationSetBy = Automatic
+
+	column RetailerCode
+		dataType: string
+		lineageTag: 4c6b504f-c492-45a6-bc8c-a7735ce7d829
+		summarizeBy: none
+		sourceColumn: RetailerCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column RetailerName
+		dataType: string
+		lineageTag: bf5c6315-cd32-49fd-bed1-1ea7a65d365c
+		summarizeBy: none
+		sourceColumn: RetailerName
+
+		annotation SummarizationSetBy = Automatic
+
+	column AddressLine1
+		dataType: string
+		lineageTag: 909b0263-9bd3-425f-b24e-c5903b58d017
+		summarizeBy: none
+		sourceColumn: AddressLine1
+
+		annotation SummarizationSetBy = Automatic
+
+	column AddressLine2
+		dataType: string
+		lineageTag: d2b33cae-26f2-4c23-91a5-4c09453d34a2
+		summarizeBy: none
+		sourceColumn: AddressLine2
+
+		annotation SummarizationSetBy = Automatic
+
+	column AddressLine3
+		dataType: string
+		lineageTag: f8a6ee07-275b-4847-98f8-1c4e4f9774ff
+		summarizeBy: none
+		sourceColumn: AddressLine3
+
+		annotation SummarizationSetBy = Automatic
+
+	column AddressLine4
+		dataType: string
+		lineageTag: 0f4c0b0d-aba0-416c-ab8d-83e8c49c0c38
+		summarizeBy: none
+		sourceColumn: AddressLine4
+
+		annotation SummarizationSetBy = Automatic
+
+	column AddressLine5
+		dataType: string
+		lineageTag: 23859290-e578-4512-8c40-4af42d2b4cbd
+		summarizeBy: none
+		sourceColumn: AddressLine5
+
+		annotation SummarizationSetBy = Automatic
+
+	column PostCode
+		dataType: string
+		lineageTag: 94cc3cad-2f8b-4832-8a42-b08b9cc12511
+		summarizeBy: none
+		sourceColumn: PostCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column PostCodeSys
+		dataType: string
+		lineageTag: 1a597e73-48b5-436c-9c34-64a0e4de3106
+		summarizeBy: none
+		sourceColumn: PostCodeSys
+
+		annotation SummarizationSetBy = Automatic
+
+	column AlphaSearchCode
+		dataType: string
+		lineageTag: 4fa0a6af-39e4-4804-b3d2-7e69879bf8f1
+		summarizeBy: none
+		sourceColumn: AlphaSearchCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ShortAddress
+		dataType: string
+		lineageTag: 42740166-43cd-447b-acd6-6d877dc8d7c5
+		summarizeBy: none
+		sourceColumn: ShortAddress
+
+		annotation SummarizationSetBy = Automatic
+
+	column TelephoneNumber
+		dataType: string
+		lineageTag: 4ef21c0b-7dcd-44cd-86c6-e2ca1818422f
+		summarizeBy: none
+		sourceColumn: TelephoneNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column TelephoneNumberSys
+		dataType: string
+		lineageTag: 5b7ae694-4e6d-4d7a-972a-5bcf79f14493
+		summarizeBy: none
+		sourceColumn: TelephoneNumberSys
+
+		annotation SummarizationSetBy = Automatic
+
+	column FaxNumber
+		dataType: string
+		lineageTag: 8d3d5f5d-b328-42af-ba61-8df0344746db
+		summarizeBy: none
+		sourceColumn: FaxNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column EMailAddress
+		dataType: string
+		lineageTag: 23da2d24-1989-4f44-b7a9-c59ee956896a
+		summarizeBy: none
+		sourceColumn: EMailAddress
+
+		annotation SummarizationSetBy = Automatic
+
+	column WebAddress
+		dataType: string
+		lineageTag: ce2615de-9200-4515-ba50-9c104a0b3f90
+		summarizeBy: none
+		sourceColumn: WebAddress
+
+		annotation SummarizationSetBy = Automatic
+
+	column SettlementTermsCode
+		dataType: string
+		lineageTag: decf3afe-0d98-45e9-ac3b-8c80ed7acd6e
+		summarizeBy: none
+		sourceColumn: SettlementTermsCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column PaymentMethodCode
+		dataType: string
+		lineageTag: a2c6f9c8-aa43-4802-8fb0-2cc0370eb6fd
+		summarizeBy: none
+		sourceColumn: PaymentMethodCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column BankSortCode
+		dataType: double
+		lineageTag: 4093a428-e5da-4192-b5d8-5bd06b16ebe3
+		summarizeBy: count
+		sourceColumn: BankSortCode
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column BankAccountNumber
+		dataType: string
+		lineageTag: 5ed04d30-b8fc-4c09-a210-637db7841430
+		summarizeBy: none
+		sourceColumn: BankAccountNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column NominalMaskCode
+		dataType: string
+		lineageTag: 3abddf49-4789-4fa2-9bdb-b3bf699aa651
+		summarizeBy: none
+		sourceColumn: NominalMaskCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column PriceCodeTable
+		dataType: string
+		lineageTag: 619eb0a6-43f5-400f-959d-e417b31b1c53
+		summarizeBy: none
+		sourceColumn: PriceCodeTable
+
+		annotation SummarizationSetBy = Automatic
+
+	column FactorAccountCode
+		dataType: string
+		lineageTag: c8379c57-a4a8-4c86-8264-0ce5292e1409
+		summarizeBy: none
+		sourceColumn: FactorAccountCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column FactorAccountCodeSon
+		dataType: string
+		lineageTag: 35917a24-795a-417e-9aa4-ef305df9d056
+		summarizeBy: none
+		sourceColumn: FactorAccountCodeSon
+
+		annotation SummarizationSetBy = Automatic
+
+	column TradeDiscountCode
+		dataType: string
+		lineageTag: 1471800b-6630-46a6-a72f-125a50f551c9
+		summarizeBy: none
+		sourceColumn: TradeDiscountCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProformaFlag
+		dataType: string
+		lineageTag: 6559a116-2a38-4d24-bf6f-6d681cc91bbf
+		summarizeBy: none
+		sourceColumn: ProformaFlag
+
+		annotation SummarizationSetBy = Automatic
+
+	column StatementRequiredFlag
+		dataType: string
+		lineageTag: d0e4a69a-7cf2-48fa-b4cb-747d5e0d642a
+		summarizeBy: none
+		sourceColumn: StatementRequiredFlag
+
+		annotation SummarizationSetBy = Automatic
+
+	column ConsolidateStatementFlag
+		dataType: string
+		lineageTag: ac029dee-77c5-4079-b705-680ba9af1255
+		summarizeBy: none
+		sourceColumn: ConsolidateStatementFlag
+
+		annotation SummarizationSetBy = Automatic
+
+	column StatementCurrencyFlag
+		dataType: string
+		lineageTag: 33fe71e2-225f-4d9d-8b67-5d6a489e14da
+		summarizeBy: none
+		sourceColumn: StatementCurrencyFlag
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrencyCode
+		dataType: string
+		lineageTag: 0279f70f-4e4a-4f8b-8f09-15a52054da39
+		summarizeBy: none
+		sourceColumn: CurrencyCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrencyProcessingRequired
+		dataType: string
+		lineageTag: ac74cb8f-e1d1-4d82-b391-7cc22d161315
+		summarizeBy: none
+		sourceColumn: CurrencyProcessingRequired
+
+		annotation SummarizationSetBy = Automatic
+
+	column LetterRequiredFlag
+		dataType: string
+		lineageTag: f788254b-1629-4102-a5d6-e242633e771a
+		summarizeBy: none
+		sourceColumn: LetterRequiredFlag
+
+		annotation SummarizationSetBy = Automatic
+
+	column Salutation
+		dataType: string
+		lineageTag: bc4f8e51-11b8-406d-a676-969a873f2cf8
+		summarizeBy: none
+		sourceColumn: Salutation
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContactName
+		dataType: string
+		lineageTag: fe65bc9a-2267-476f-b337-ccd0e280a4f9
+		summarizeBy: none
+		sourceColumn: ContactName
+
+		annotation SummarizationSetBy = Automatic
+
+	column OnStopFlag
+		dataType: string
+		lineageTag: 6989a744-b46d-490a-867e-c7b70a2d7c00
+		summarizeBy: none
+		sourceColumn: OnStopFlag
+
+		annotation SummarizationSetBy = Automatic
+
+	column OnStopReasonCode
+		dataType: string
+		lineageTag: 8d6abf62-9303-44b2-ac0b-6f01612638ac
+		summarizeBy: none
+		sourceColumn: OnStopReasonCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreditLimit
+		dataType: double
+		lineageTag: 8ba85f9d-5637-4c26-b232-96fd3e5f0b79
+		summarizeBy: sum
+		sourceColumn: CreditLimit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column BackOrderFlag
+		dataType: double
+		lineageTag: 41929586-bb71-4654-b97d-5d3b7951aa47
+		summarizeBy: sum
+		sourceColumn: BackOrderFlag
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TextCode
+		dataType: string
+		lineageTag: e99e2264-881d-40ea-8437-2a78361be1ec
+		summarizeBy: none
+		sourceColumn: TextCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column OSOrdersPendingBase
+		dataType: double
+		lineageTag: 89fd3700-0e3d-4932-9f48-09fb01f31eb5
+		summarizeBy: sum
+		sourceColumn: OSOrdersPendingBase
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OSOrdersPendingCurr
+		dataType: double
+		lineageTag: 6c1078bf-ab6a-4175-8c94-5b66246b02ca
+		summarizeBy: sum
+		sourceColumn: OSOrdersPendingCurr
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ElectronicTradingFlag
+		dataType: string
+		lineageTag: b465fad0-9c14-4fa0-85a4-56320d27714e
+		summarizeBy: none
+		sourceColumn: ElectronicTradingFlag
+
+		annotation SummarizationSetBy = Automatic
+
+	column VATStatus
+		dataType: string
+		lineageTag: 7fb0240b-4c51-43ef-b7aa-c9c390b487e7
+		summarizeBy: none
+		sourceColumn: VATStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column VATCode
+		dataType: string
+		lineageTag: 8ca9c970-5372-4cfc-8860-99d6bbb3ef0d
+		summarizeBy: none
+		sourceColumn: VATCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column VATRegistrationNo
+		dataType: string
+		lineageTag: 2a83bbb2-1f0c-4f90-958e-ca5b2bbfe2b3
+		summarizeBy: none
+		sourceColumn: VATRegistrationNo
+
+		annotation SummarizationSetBy = Automatic
+
+	column MemberStateCode
+		dataType: string
+		lineageTag: b0e8d033-556b-4420-8e63-44d9ca98c6c4
+		summarizeBy: none
+		sourceColumn: MemberStateCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column TransactionNatureCode
+		dataType: int64
+		formatString: 0
+		lineageTag: 90d35657-49b2-4348-a397-9337ae6b49cd
+		summarizeBy: count
+		sourceColumn: TransactionNatureCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column TermsOfDeliverCode
+		dataType: string
+		lineageTag: 98a41875-3672-454a-971d-57d64920ffe9
+		summarizeBy: none
+		sourceColumn: TermsOfDeliverCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModeOfTransportCode
+		dataType: string
+		lineageTag: 07483e6d-9d41-4584-8302-71087f00d02d
+		summarizeBy: none
+		sourceColumn: ModeOfTransportCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column AverageDaysToPay
+		dataType: int64
+		formatString: 0
+		lineageTag: 5b171395-1b02-418b-8197-4f860cb47fa9
+		summarizeBy: sum
+		sourceColumn: AverageDaysToPay
+
+		annotation SummarizationSetBy = Automatic
+
+	column NoOfPaidTransactionsThisYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 2b24131e-cfdf-4871-96f1-26e628c77070
+		summarizeBy: sum
+		sourceColumn: NoOfPaidTransactionsThisYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column NoDaysTakenToPay
+		dataType: int64
+		formatString: 0
+		lineageTag: df96f8d7-fa7a-4c36-9e87-bfef1646f161
+		summarizeBy: sum
+		sourceColumn: NoDaysTakenToPay
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastPaymentValue
+		dataType: double
+		lineageTag: fb7cda57-c169-492a-b7e4-95dca8802a87
+		summarizeBy: sum
+		sourceColumn: LastPaymentValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LastPaymentDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a7d48ab7-ff59-420b-afc2-93174b8844ed
+		summarizeBy: none
+		sourceColumn: LastPaymentDate
+
+		variation Variation
+			isDefault
+			relationship: d61016b4-d490-46c3-a47f-692358305303
+			defaultHierarchy: LocalDateTable_824f2a09-343d-4bd6-983b-633995174ba1.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastInvoiceDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 60c8bcbc-5d17-4f5f-b6c2-a5724f29c044
+		summarizeBy: none
+		sourceColumn: LastInvoiceDate
+
+		variation Variation
+			isDefault
+			relationship: 2694e671-b18d-4044-a0a9-4ebdfb1748ef
+			defaultHierarchy: LocalDateTable_a17f99e3-d561-43cc-b4fb-ebaffc505da6.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column DefGLExpenseCode
+		dataType: string
+		lineageTag: 394f7d13-4951-4f63-9266-02f8086636ef
+		summarizeBy: none
+		sourceColumn: DefGLExpenseCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column DataTransferFlag
+		dataType: string
+		lineageTag: e57b441b-97f0-4c45-91af-4c688dff21ff
+		summarizeBy: none
+		sourceColumn: DataTransferFlag
+
+		annotation SummarizationSetBy = Automatic
+
+	column ConcurrentAccount
+		dataType: string
+		lineageTag: d932e6ec-6ce5-4410-a347-ff89c2631ea3
+		summarizeBy: none
+		sourceColumn: ConcurrentAccount
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrentBalance
+		dataType: double
+		lineageTag: 83eaded4-9bd3-4b4a-ae10-f38d5f4cae87
+		summarizeBy: sum
+		sourceColumn: CurrentBalance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TotalCreditsNotAllocated
+		dataType: double
+		lineageTag: 2663a841-681a-4be9-9f99-f82f23df358f
+		summarizeBy: sum
+		sourceColumn: TotalCreditsNotAllocated
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CreditLimitCurrency
+		dataType: double
+		lineageTag: 495163c0-eb13-4e5c-ae70-2b62b725a37f
+		summarizeBy: sum
+		sourceColumn: CreditLimitCurrency
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CurrentBalanceCurrency
+		dataType: double
+		lineageTag: f94cce19-7bb5-45e0-966b-21da572e78d5
+		summarizeBy: sum
+		sourceColumn: CurrentBalanceCurrency
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TotalCreditsNotAllocatedCurrency
+		dataType: double
+		lineageTag: ee85cdec-4081-4962-924d-22f483288d53
+		summarizeBy: sum
+		sourceColumn: TotalCreditsNotAllocatedCurrency
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LastPaymentValueCurrency
+		dataType: double
+		lineageTag: 964ebc85-9a38-4987-94e8-7fcb9cadf864
+		summarizeBy: sum
+		sourceColumn: LastPaymentValueCurrency
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column GLCodeControl
+		dataType: string
+		lineageTag: 00fbe1b6-a3c0-4179-847a-7d2d5ecbb703
+		summarizeBy: none
+		sourceColumn: GLCodeControl
+
+		annotation SummarizationSetBy = Automatic
+
+	column PricingMethod
+		dataType: string
+		lineageTag: 00dbe06d-1c0b-49fc-bcb2-913c3b9e1d7b
+		summarizeBy: none
+		sourceColumn: PricingMethod
+
+		annotation SummarizationSetBy = Automatic
+
+	column PriceGroup
+		dataType: string
+		lineageTag: 22a564f0-c9b1-4ab8-af2f-9819ed146537
+		summarizeBy: none
+		sourceColumn: PriceGroup
+
+		annotation SummarizationSetBy = Automatic
+
+	column TradeSchemeGroup
+		dataType: string
+		lineageTag: 6d746b8b-c10f-43ea-a5bd-831c3254eaff
+		summarizeBy: none
+		sourceColumn: TradeSchemeGroup
+
+		annotation SummarizationSetBy = Automatic
+
+	column InvoiceAccountCode
+		dataType: string
+		lineageTag: 7531d6e8-8abd-4e6a-b603-da63f7e166ff
+		summarizeBy: none
+		sourceColumn: InvoiceAccountCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column CommAcctCode
+		dataType: string
+		lineageTag: e96f96f0-a904-4dc9-8b62-2035cc45bb7a
+		summarizeBy: none
+		sourceColumn: CommAcctCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column CommAcctSubCode
+		dataType: string
+		lineageTag: 59e7a7ed-5f50-4135-a46f-9706c34bd2fd
+		summarizeBy: none
+		sourceColumn: CommAcctSubCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column CommissionPercent
+		dataType: double
+		lineageTag: 8243ba05-3690-4360-9d34-fcc40dff7e3a
+		summarizeBy: sum
+		sourceColumn: CommissionPercent
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ConsInvoiceCode
+		dataType: string
+		lineageTag: e9d64743-e21a-4e0e-9728-d4d3898b18b4
+		summarizeBy: none
+		sourceColumn: ConsInvoiceCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column WarehouseCode
+		dataType: string
+		lineageTag: 160b9eaf-4ede-4849-97a9-760c6fa1fa19
+		summarizeBy: none
+		sourceColumn: WarehouseCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column LocationCode
+		dataType: string
+		lineageTag: c1b7a354-b0f1-4424-adc4-afc9bab91202
+		summarizeBy: none
+		sourceColumn: LocationCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesWarehouseCode
+		dataType: string
+		lineageTag: 17036cb8-e708-415f-a291-ef5e8eacf57a
+		summarizeBy: none
+		sourceColumn: SalesWarehouseCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesLocationCode
+		dataType: string
+		lineageTag: 306a6408-a534-413c-aca3-aa7f1fbe01e2
+		summarizeBy: none
+		sourceColumn: SalesLocationCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column StockWarehouseCode
+		dataType: string
+		lineageTag: 814d77ae-41ca-4a0d-9583-2b17bc333db4
+		summarizeBy: none
+		sourceColumn: StockWarehouseCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column StockLocationCode
+		dataType: string
+		lineageTag: 52f27db6-1290-4562-89a5-b3a537d6eaa0
+		summarizeBy: none
+		sourceColumn: StockLocationCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column DeliveryTermsCode
+		dataType: string
+		lineageTag: 3332a59b-9e08-445d-bac6-bf5b996a4bb9
+		summarizeBy: none
+		sourceColumn: DeliveryTermsCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryCode
+		dataType: string
+		lineageTag: 303a0fad-d6dd-4208-8b16-d1e51d48d064
+		summarizeBy: none
+		sourceColumn: CountryCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column TransportModeCode
+		dataType: string
+		lineageTag: 1b5b0897-6ab0-4995-bdfb-98b5cc4986fb
+		summarizeBy: none
+		sourceColumn: TransportModeCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column InvoiceDeclaration
+		dataType: string
+		lineageTag: 52514e64-9f9e-4a03-a400-763908191339
+		summarizeBy: none
+		sourceColumn: InvoiceDeclaration
+
+		annotation SummarizationSetBy = Automatic
+
+	column CashSalesFlag
+		dataType: string
+		lineageTag: 2d25ec32-4864-40c3-bf5d-3dfc84433ecc
+		summarizeBy: none
+		sourceColumn: CashSalesFlag
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiscountFlag
+		dataType: string
+		lineageTag: b1248099-62d3-4a0c-85ed-ccc979fc8be5
+		summarizeBy: none
+		sourceColumn: DiscountFlag
+
+		annotation SummarizationSetBy = Automatic
+
+	column PartialDespatchAllowed
+		dataType: string
+		lineageTag: 818d0b03-08b6-44b2-acd8-bfe304a51fed
+		summarizeBy: none
+		sourceColumn: PartialDespatchAllowed
+
+		annotation SummarizationSetBy = Automatic
+
+	column BackOrdersAllowed
+		dataType: string
+		lineageTag: b7abfa84-65e3-4e6f-8a70-5f207e8b9f8d
+		summarizeBy: none
+		sourceColumn: BackOrdersAllowed
+
+		annotation SummarizationSetBy = Automatic
+
+	column PrefOperatorName1
+		dataType: string
+		lineageTag: a53c03bf-5fd3-4ad6-87bd-2e832fec9dd8
+		summarizeBy: none
+		sourceColumn: PrefOperatorName1
+
+		annotation SummarizationSetBy = Automatic
+
+	column PrefOperatorName2
+		dataType: string
+		lineageTag: 1e17d54c-cd5c-447b-9061-acb75d3f5930
+		summarizeBy: none
+		sourceColumn: PrefOperatorName2
+
+		annotation SummarizationSetBy = Automatic
+
+	column CallFrequency
+		dataType: int64
+		formatString: 0
+		lineageTag: fbedeafe-fbf4-42e0-a044-931fa76cdf5f
+		summarizeBy: sum
+		sourceColumn: CallFrequency
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastCallNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 1e5ebf02-1ced-48e3-b7b3-922966fd4461
+		summarizeBy: sum
+		sourceColumn: LastCallNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column AvgBuyingFreq
+		dataType: int64
+		formatString: 0
+		lineageTag: a84a0053-fd76-4bf5-8c6b-40ecdff46a86
+		summarizeBy: sum
+		sourceColumn: AvgBuyingFreq
+
+		annotation SummarizationSetBy = Automatic
+
+	column TSTelephoneNumber
+		dataType: string
+		lineageTag: 22cf17a3-0c61-4dd2-9f60-17d15e5e218e
+		summarizeBy: none
+		sourceColumn: TSTelephoneNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column ParentRetailerCode
+		dataType: string
+		lineageTag: 4c7be15d-0200-475d-8144-490c515c6d36
+		summarizeBy: none
+		sourceColumn: ParentRetailerCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column MinOrderValue
+		dataType: double
+		lineageTag: 77d38712-100f-40a4-9677-f45569a4fd9d
+		summarizeBy: sum
+		sourceColumn: MinOrderValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Gurantee
+		dataType: double
+		lineageTag: edf57b0d-0e6b-4db4-b78d-83703ded85e9
+		summarizeBy: sum
+		sourceColumn: Gurantee
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Deposit
+		dataType: double
+		lineageTag: 1389de7c-6f6c-47c3-8500-5981a7b0b7a8
+		summarizeBy: sum
+		sourceColumn: Deposit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Trust
+		dataType: double
+		lineageTag: 9642de6e-5a26-45fd-8b19-76103e74f02b
+		summarizeBy: sum
+		sourceColumn: Trust
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MarketShareNorm
+		dataType: double
+		lineageTag: c0056c67-a30c-4d2a-9a04-8e19d4c56090
+		summarizeBy: sum
+		sourceColumn: MarketShareNorm
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MarketShare
+		dataType: double
+		lineageTag: 4cafec3b-172c-43aa-aceb-58f83ec4681c
+		summarizeBy: sum
+		sourceColumn: MarketShare
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MarketShareAsAt
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c1a39b30-5b11-4548-99ee-cfe8da4eac6e
+		summarizeBy: none
+		sourceColumn: MarketShareAsAt
+
+		variation Variation
+			isDefault
+			relationship: 795338fc-aa30-46a9-85f6-b9719e0b3c97
+			defaultHierarchy: LocalDateTable_858b6381-7c9e-48f6-8f57-e4a38c1e5192.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column BusinessType
+		dataType: string
+		lineageTag: edf59d22-0896-43be-9343-9f118b18b381
+		summarizeBy: none
+		sourceColumn: BusinessType
+
+		annotation SummarizationSetBy = Automatic
+
+	column BusinessRegisterationNumber
+		dataType: string
+		lineageTag: d8cab462-629a-4277-afdd-2a339ef8749c
+		summarizeBy: none
+		sourceColumn: BusinessRegisterationNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column BusinessRegisterationName
+		dataType: string
+		lineageTag: b73992f5-a3a4-474d-8cd1-c7c088beef4e
+		summarizeBy: none
+		sourceColumn: BusinessRegisterationName
+
+		annotation SummarizationSetBy = Automatic
+
+	column BusinessRegisterationDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: effc29e0-fc82-4600-8134-d1081da17b5c
+		summarizeBy: none
+		sourceColumn: BusinessRegisterationDate
+
+		variation Variation
+			isDefault
+			relationship: 1e691477-f53a-4b0e-b19d-e6bd9317bf95
+			defaultHierarchy: LocalDateTable_a8b2ef22-7dda-47cf-948d-ae3dfcb7c55f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column BusinessRegisterationExpiryDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 07105cc0-ae5d-41f3-885d-1b70317a67e4
+		summarizeBy: none
+		sourceColumn: BusinessRegisterationExpiryDate
+
+		variation Variation
+			isDefault
+			relationship: e8aa4fa9-c699-40b9-b7a7-d10d0f44f9a3
+			defaultHierarchy: LocalDateTable_994dcc16-a4c0-496b-bc62-52f42407c3d8.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 8d1f2143-ad19-475d-9986-6859f8e422b8
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column TerritoryCode
+		dataType: string
+		lineageTag: d3940ce6-61eb-48d4-8ce6-04fec6511872
+		summarizeBy: none
+		sourceColumn: TerritoryCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column TerritoryDescription
+		dataType: string
+		lineageTag: f608a8a1-382d-4496-bdd6-f3fad1657a3b
+		summarizeBy: none
+		sourceColumn: TerritoryDescription
+
+		annotation SummarizationSetBy = Automatic
+
+	column RetailerType
+		dataType: string
+		lineageTag: 24885938-4d0c-4731-90fd-872ddb9a1d49
+		summarizeBy: none
+		sourceColumn: RetailerType
+
+		annotation SummarizationSetBy = Automatic
+
+	column RetailerClass
+		dataType: string
+		lineageTag: cffe8ce2-4c17-4910-a774-828a3e87637f
+		summarizeBy: none
+		sourceColumn: RetailerClass
+
+		annotation SummarizationSetBy = Automatic
+
+	column RetailerCategory
+		dataType: string
+		lineageTag: c9568d5f-4713-462b-88a9-b726e16592b3
+		summarizeBy: none
+		sourceColumn: RetailerCategory
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Retailer_Details = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("202.124.186.120", "XONTVenturaUserSNWA", [Query="SELECT #(lf)    R.[RecordID],#(lf)    R.[BusinessUnit],#(lf)    R.[RetailerCode],#(lf)    R.[RetailerName],#(lf)    R.[AddressLine1],#(lf)    R.[AddressLine2],#(lf)    R.[AddressLine3],#(lf)    R.[AddressLine4],#(lf)    R.[AddressLine5],#(lf)    R.[PostCode],#(lf)    R.[PostCodeSys],#(lf)    R.[AlphaSearchCode],#(lf)    R.[ShortAddress],#(lf)    R.[TelephoneNumber],#(lf)    R.[TelephoneNumberSys],#(lf)    R.[FaxNumber],#(lf)    R.[EMailAddress],#(lf)    R.[WebAddress],#(lf)    R.[SettlementTermsCode],#(lf)    R.[PaymentMethodCode],#(lf)    R.[BankSortCode],#(lf)    R.[BankAccountNumber],#(lf)    R.[NominalMaskCode],#(lf)    R.[PriceCodeTable],#(lf)    R.[FactorAccountCode],#(lf)    R.[FactorAccountCodeSon],#(lf)    R.[TradeDiscountCode],#(lf)    R.[ProformaFlag],#(lf)    R.[StatementRequiredFlag],#(lf)    R.[ConsolidateStatementFlag],#(lf)    R.[StatementCurrencyFlag],#(lf)    R.[CurrencyCode],#(lf)    R.[CurrencyProcessingRequired],#(lf)    R.[LetterRequiredFlag],#(lf)    R.[Salutation],#(lf)    R.[ContactName],#(lf)    R.[OnStopFlag],#(lf)    R.[OnStopReasonCode],#(lf)    R.[CreditLimit],#(lf)    R.[BackOrderFlag],#(lf)    R.[TextCode],#(lf)    R.[OSOrdersPendingBase],#(lf)    R.[OSOrdersPendingCurr],#(lf)    R.[ElectronicTradingFlag],#(lf)    R.[VATStatus],#(lf)    R.[VATCode],#(lf)    R.[VATRegistrationNo],#(lf)    R.[MemberStateCode],#(lf)    R.[TransactionNatureCode],#(lf)    R.[TermsOfDeliverCode],#(lf)    R.[ModeOfTransportCode],#(lf)    R.[AverageDaysToPay],#(lf)    R.[NoOfPaidTransactionsThisYear],#(lf)    R.[NoDaysTakenToPay],#(lf)    R.[LastPaymentValue],#(lf)    R.[LastPaymentDate],#(lf)    R.[LastInvoiceDate],#(lf)    R.[DefGLExpenseCode],#(lf)    R.[DataTransferFlag],#(lf)    R.[ConcurrentAccount],#(lf)    R.[CurrentBalance],#(lf)    R.[TotalCreditsNotAllocated],#(lf)    R.[CreditLimitCurrency],#(lf)    R.[CurrentBalanceCurrency],#(lf)    R.[TotalCreditsNotAllocatedCurrency],#(lf)    R.[LastPaymentValueCurrency],#(lf)    R.[GLCodeControl],#(lf)    R.[PricingMethod],#(lf)    R.[PriceGroup],#(lf)    R.[TradeSchemeGroup],#(lf)    R.[InvoiceAccountCode],#(lf)    R.[CommAcctCode],#(lf)    R.[CommAcctSubCode],#(lf)    R.[CommissionPercent],#(lf)    R.[ConsInvoiceCode],#(lf)    R.[WarehouseCode],#(lf)    R.[LocationCode],#(lf)    R.[SalesWarehouseCode],#(lf)    R.[SalesLocationCode],#(lf)    R.[StockWarehouseCode],#(lf)    R.[StockLocationCode],#(lf)    R.[DeliveryTermsCode],#(lf)    R.[CountryCode],#(lf)    R.[TransportModeCode],#(lf)    R.[InvoiceDeclaration],#(lf)    R.[CashSalesFlag],#(lf)    R.[DiscountFlag],#(lf)    R.[PartialDespatchAllowed],#(lf)    R.[BackOrdersAllowed],#(lf)    R.[PrefOperatorName1],#(lf)    R.[PrefOperatorName2],#(lf)    R.[CallFrequency],#(lf)    R.[LastCallNumber],#(lf)    R.[AvgBuyingFreq],#(lf)    R.[TSTelephoneNumber],#(lf)    R.[ParentRetailerCode],#(lf)    R.[MinOrderValue],#(lf)    R.[Gurantee],#(lf)    R.[Deposit],#(lf)    R.[Trust],#(lf)    R.[MarketShareNorm],#(lf)    R.[MarketShare],#(lf)    R.[MarketShareAsAt],#(lf)    R.[BusinessType],#(lf)    R.[BusinessRegisterationNumber],#(lf)    R.[BusinessRegisterationName],#(lf)    R.[BusinessRegisterationDate],#(lf)    R.[BusinessRegisterationExpiryDate],#(lf)    R.[Status],#(lf)    R.[TerritoryCode] ,#(lf)    -- Adding Territory, Retailer Type, Retailer Class, and Retailer Category#(lf)    TETY.[MasterGroupValueDescription] AS TerritoryDescription,#(lf)    RETTYPE.[MasterGroupValueDescription] AS RetailerType,#(lf)    RETCLASS.[MasterGroupValueDescription] AS RetailerClass,#(lf)    RETCATG.[MasterGroupValueDescription] AS RetailerCategory#(lf)FROM #(lf)    [XONTVenturaUserSNWA].[RD].[Retailer] R#(lf)LEFT JOIN #(lf)    [XONTVenturaUserSNWA].[RD].[RetailerClassification] TETY#(lf)    ON R.[RetailerCode] = TETY.[RetailerCode] AND TETY.[MasterGroup] = 'TETY'#(lf)LEFT JOIN #(lf)    [XONTVenturaUserSNWA].[RD].[RetailerClassification] RETTYPE#(lf)    ON R.[RetailerCode] = RETTYPE.[RetailerCode] AND RETTYPE.[MasterGroup] = 'RETTYPE'#(lf)LEFT JOIN #(lf)    [XONTVenturaUserSNWA].[RD].[RetailerClassification] RETCLASS#(lf)    ON R.[RetailerCode] = RETCLASS.[RetailerCode] AND RETCLASS.[MasterGroup] = 'RETCLASS'#(lf)LEFT JOIN #(lf)    [XONTVenturaUserSNWA].[RD].[RetailerClassification] RETCATG#(lf)    ON R.[RetailerCode] = RETCATG.[RetailerCode] AND RETCATG.[MasterGroup] = 'RETCATG';#(lf)", HierarchicalNavigation=true, MultiSubnetFailover=true])
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

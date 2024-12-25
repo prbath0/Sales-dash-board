@@ -1,0 +1,262 @@
+relationship cbc81b4d-66c7-4d78-b7d1-854c23aeff21
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Target_Executive.UpdatedOn
+	toColumn: LocalDateTable_e06cdb95-2193-4707-b78e-869858232dc4.Date
+
+relationship 256b0137-52e1-4b4b-a1c5-ccbc92c94386
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Product_Details.LastUpdatedOn
+	toColumn: LocalDateTable_f91cf435-e86b-41d5-a7ef-05cfbe91a556.Date
+
+relationship c7ff57e6-0e31-4e8b-ba86-46e6d0894fad
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Product_Details.CreatedOn
+	toColumn: LocalDateTable_7e20bbcb-187c-4e65-b6da-bf59cb94a884.Date
+
+relationship c73a328e-2a7a-4e7a-a5a6-066865237d04
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Product_Details.LastTransactionDate
+	toColumn: LocalDateTable_e43e1518-ed47-4bec-829c-befa8da7733a.Date
+
+relationship 26393c01-be16-4f0c-9541-9e3caa47a04d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Product_Details.DiscontinuedDate
+	toColumn: LocalDateTable_f131463d-fbdd-4e23-b3c2-ad5a73c9313a.Date
+
+relationship 2c051a89-e616-4b04-911a-dff41779b635
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Product_Details.PDAUpdatedOn
+	toColumn: LocalDateTable_b92797c6-4929-4ae1-85c6-46d38fdc5428.Date
+
+relationship 047d08c0-e0f2-4179-b67e-bb9134e8c8a8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Product_Details.ExpiryDate
+	toColumn: LocalDateTable_58ceae9a-85e2-4aa7-b65d-dfdbcb6cbd6d.Date
+
+relationship a3afdc33-fdaa-442e-a1c0-40e1d116d8be
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Product_Details.ApprovedOn
+	toColumn: LocalDateTable_91a46210-e15a-402c-b909-dab9987a3254.Date
+
+relationship eb549e51-f3ec-49ae-8a02-34f296a92ce8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Product_Classification.CreatedOn
+	toColumn: LocalDateTable_f2fc64e5-504d-4804-8893-550245604fb9.Date
+
+relationship 7e07e6e4-d678-4331-90c1-efec1ce4ca3a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Product_Classification.UpdatedOn
+	toColumn: LocalDateTable_15e40edc-c714-427d-9d2f-2f6e0aa1d066.Date
+
+relationship 08bf2003-2614-402d-84b3-024bdbe43a3e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Master_Definition_Value.CreatedOn
+	toColumn: LocalDateTable_7747f333-b42b-4455-9da6-2bf62a40a439.Date
+
+relationship 7174e287-25bb-49c9-8ac6-d78244f5c96d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Master_Definition_Value.UpdatedOn
+	toColumn: LocalDateTable_a81d152b-f087-496a-bffd-965773537508.Date
+
+relationship af9cda0f-a588-4ba5-b31c-3eb7622320a2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Master_Definition_Value.LastImageUpdatedOn
+	toColumn: LocalDateTable_7816fe50-b31e-4820-becd-6da05a3fef16.Date
+
+relationship AutoDetected_30796d4d-ac83-479a-8576-6e557e799cd0
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Product_Classification.ProductCode
+	toColumn: Product_Details.ProductCode
+
+relationship 4360f1fd-aff2-451b-b40c-d49f8cb876ef
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Master_Executive_Details.PasswordExpiry
+	toColumn: LocalDateTable_b284ae03-65cf-484a-811c-1086974277f1.Date
+
+relationship 274bb244-c7d0-4a7f-a5c4-b4278f79679d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Master_Executive_Details.SurveyActiveDate
+	toColumn: LocalDateTable_282dda92-6f4a-45a1-a870-704da46db02a.Date
+
+relationship af6311a8-1c87-47a7-88ef-325fb3cab9cc
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Master_Executive_Details.LastSurveyDate
+	toColumn: LocalDateTable_280bef36-7965-4c38-9446-896e9ea57b60.Date
+
+relationship f78829ad-a2cf-49b8-a696-c4912c0e7f21
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Master_Executive_Details.CreatedOn
+	toColumn: LocalDateTable_82bfd29b-86b8-4b10-9eac-ba9427d563c9.Date
+
+relationship adb5b110-e657-47cf-b259-3b284e7f0da5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Master_Executive_Details.UpdatedOn
+	toColumn: LocalDateTable_015610d7-ad3d-4263-bb83-94b8e0e9c7b1.Date
+
+relationship c570df85-0c6d-40fe-a836-227624dc49ab
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Master_Executive_Details.DownloadDate
+	toColumn: LocalDateTable_01b01670-0bd2-47a6-bbfb-4e6be34477e4.Date
+
+relationship 74f985a6-299f-4856-b0b7-f76cdedb8287
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Master_Executive_Details.LockedOn
+	toColumn: LocalDateTable_b849c3db-2b5e-4036-bdb0-0ce06bc54bf6.Date
+
+relationship db1b6126-e733-1f41-76d5-ee3538008543
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: Master_Executive_Details.ExecutiveCode
+	toColumn: Target_Executive.ExecutiveCode
+
+relationship 8d512f47-3869-97e1-9c85-cbf63eb02dd0
+	fromColumn: Target_Executive.ProductCode
+	toColumn: Product_Details.ProductCode
+
+relationship c84b978d-3985-437f-9f04-54ef1abef0cf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Date_Table.WeekEnding
+	toColumn: LocalDateTable_950c91dc-e746-4d67-ab2b-1586599aa4aa.Date
+
+relationship b88960e1-4820-4112-9429-70d4457948d8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Date_Table.MonthEnding
+	toColumn: LocalDateTable_bf0b0c97-c341-41c1-8d82-bcfca60c12aa.Date
+
+relationship 9f39478c-8bdd-2101-2770-8516cc7c23bf
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: 'Productive calls'.ExecutiveCode
+	toColumn: Target_Executive.ExecutiveCode
+
+relationship 77fcd965-b098-4f09-b34a-d803ced2f3bf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Map_Table.CreatedOn
+	toColumn: LocalDateTable_6c791bbe-b411-41cf-a59f-d697def2eda4.Date
+
+relationship 703214de-60cb-c4e4-931f-96d66e648685
+	fromColumn: Map_Table.ExecutiveCode
+	toColumn: Master_Executive_Details.ExecutiveCode
+
+relationship 8a90b16f-4ee9-4113-8d5d-2e8f465a518f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Date_Table_02.Date
+	toColumn: LocalDateTable_4ab8f582-d55b-4970-84f4-7da6570e620e.Date
+
+relationship b8dc3fae-688e-d3ef-ab67-68dad498bc65
+	crossFilteringBehavior: bothDirections
+	fromColumn: Date_Table.Date
+	toColumn: Date_Table_02.Date
+
+relationship 8152caad-7f3b-b993-1838-4bfcb9eaf6a4
+	fromColumn: Target_Executive.CreatedOn
+	toColumn: Date_Table_02.Date
+
+relationship 332635a8-bf86-b45e-7edf-6c5fb24b651b
+	fromColumn: 'Productive calls'.InvoiceDate
+	toColumn: Date_Table_02.Date
+
+relationship e486512f-901e-444f-9349-1b718f9df181
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Map_Table.InvoiceDate
+	toColumn: LocalDateTable_ca865386-7030-4b34-98e2-41fface83fcb.Date
+
+relationship d61016b4-d490-46c3-a47f-692358305303
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Retailer_Details.LastPaymentDate
+	toColumn: LocalDateTable_824f2a09-343d-4bd6-983b-633995174ba1.Date
+
+relationship 2694e671-b18d-4044-a0a9-4ebdfb1748ef
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Retailer_Details.LastInvoiceDate
+	toColumn: LocalDateTable_a17f99e3-d561-43cc-b4fb-ebaffc505da6.Date
+
+relationship 795338fc-aa30-46a9-85f6-b9719e0b3c97
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Retailer_Details.MarketShareAsAt
+	toColumn: LocalDateTable_858b6381-7c9e-48f6-8f57-e4a38c1e5192.Date
+
+relationship 1e691477-f53a-4b0e-b19d-e6bd9317bf95
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Retailer_Details.BusinessRegisterationDate
+	toColumn: LocalDateTable_a8b2ef22-7dda-47cf-948d-ae3dfcb7c55f.Date
+
+relationship e8aa4fa9-c699-40b9-b7a7-d10d0f44f9a3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Retailer_Details.BusinessRegisterationExpiryDate
+	toColumn: LocalDateTable_994dcc16-a4c0-496b-bc62-52f42407c3d8.Date
+
+relationship d74fc7ae-cc0e-4302-976b-7727fcfbb78f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Target_Retailer.UpdatedOn
+	toColumn: LocalDateTable_b5c1a72c-d415-453e-90f6-ce739637477d.Date
+
+relationship AutoDetected_fe71008d-de34-44fc-a3ce-fcd91a15cd03
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Product_Details.RecID
+	toColumn: Target_Retailer.RecID
+
+relationship AutoDetected_9a32dbce-5b00-4507-b907-e953cd28b3c0
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Master_Executive_Details.RecID
+	toColumn: Target_Retailer.RecID
+
+relationship AutoDetected_45025a2a-faa8-47dd-b0ba-629ee8b2e21b
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Map_Table.RecID
+	toColumn: Target_Retailer.RecID
+
+relationship AutoDetected_76ed083f-4c0c-4820-8657-e09afc0ea693
+	fromColumn: Target_Retailer.RetailerCode
+	toColumn: Retailer_Details.RetailerCode
+
+relationship 7d304db1-c2f4-e2a0-132d-10cef554fe51
+	fromColumn: Target_Retailer.CreatedOn
+	toColumn: Date_Table_02.Date
+
+relationship 28f704d9-37f4-024d-dfe8-29528ab93c00
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: Retailer_Details.TerritoryDescription
+	toColumn: Master_Executive_Details.Territory
+
+relationship 2b12e99b-2aa9-44aa-ba8e-3255eda0a78a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Target_Executive_Duplicate.UpdatedOn
+	toColumn: LocalDateTable_7029ba8b-4d9c-4bd0-88c7-770f2ca9852a.Date
+
+relationship 7fcabe0a-c6f5-aedf-c8fa-3c3c02691901
+	fromColumn: Bill_Count.ExecutiveCode
+	toColumn: Master_Executive_Details.ExecutiveCode
+
+relationship 85109185-0e4f-4961-9982-13995aa22cb7
+	fromColumn: Bill_Count.ProductCode
+	toColumn: Product_Details.ProductCode
+
+relationship e597edfc-b724-583f-1f39-a0f812e5f550
+	fromColumn: Bill_Count.RetailerCode
+	toColumn: Retailer_Details.RetailerCode
+
+relationship a037c20d-fe9a-a006-8d95-668b642fa035
+	fromColumn: Bill_Count.InvoiceDate
+	toColumn: Date_Table_02.Date
+
+relationship 163db57d-05a6-4cad-9719-6c82ef4d6879
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Date_Table_03.Date
+	toColumn: LocalDateTable_e8a324eb-9777-4e9e-8ea5-c12617f6ea03.Date
+
+relationship f12c584a-2a19-cea7-bbd2-8751a2f18081
+	crossFilteringBehavior: bothDirections
+	securityFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: Target_Executive_Duplicate.CreatedOn
+	toColumn: Date_Table_03.Date
+

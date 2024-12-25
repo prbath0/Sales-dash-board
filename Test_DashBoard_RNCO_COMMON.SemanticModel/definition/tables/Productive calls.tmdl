@@ -1,0 +1,49 @@
+table 'Productive calls'
+	lineageTag: 67de35f0-698b-4816-8592-119156f0e1ec
+
+	column InvoiceDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 4a60a837-039c-4961-9b1a-c3c328e3ccc2
+		summarizeBy: none
+		sourceColumn: InvoiceDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column TerritoryCode
+		dataType: string
+		lineageTag: 3df3e9d5-7ede-43f6-aea8-260a954ed38e
+		summarizeBy: none
+		sourceColumn: TerritoryCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ExecutiveCode
+		dataType: string
+		lineageTag: b7a90c08-ed4d-48d4-a03f-7610c056ffcf
+		summarizeBy: none
+		sourceColumn: ExecutiveCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalProductiveCalls
+		dataType: int64
+		formatString: 0
+		lineageTag: 4175ea15-1256-4f37-8896-57df4ab74777
+		summarizeBy: sum
+		sourceColumn: TotalProductiveCalls
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Productive calls' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("202.124.186.120", "XONTVenturaUserSNWA", [Query="WITH DailyProductiveCalls AS (#(lf)    SELECT #(lf)        [InvoiceDate],#(lf)        [RetailerCode],#(lf)        [TerritoryCode],#(lf)        [ExecutiveCode],#(lf)        ROW_NUMBER() OVER (PARTITION BY [InvoiceDate], [RetailerCode], [TerritoryCode], [ExecutiveCode] ORDER BY [RecID]) AS RowNum#(lf)    FROM #(lf)        [XONTVenturaUserSNWA].[RD].[SalesInvoiceHeader]#(lf)    WHERE #(lf)        [TotalInvoiceValue] > 0 -- Filter for productive calls with positive invoice value#(lf))#(lf)#(lf)SELECT #(lf)    [InvoiceDate],#(lf)    [TerritoryCode],#(lf)    [ExecutiveCode],#(lf)    COUNT(DISTINCT [RetailerCode]) AS TotalProductiveCalls -- Count distinct retailer codes per day, territory, and executive#(lf)FROM #(lf)    DailyProductiveCalls#(lf)WHERE #(lf)    RowNum = 1 -- Ensures only one entry per retailer per day, per territory, and per executive#(lf)GROUP BY #(lf)    [InvoiceDate], [TerritoryCode], [ExecutiveCode]#(lf)ORDER BY #(lf)    [InvoiceDate], [TerritoryCode], [ExecutiveCode];", HierarchicalNavigation=true, MultiSubnetFailover=true])
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

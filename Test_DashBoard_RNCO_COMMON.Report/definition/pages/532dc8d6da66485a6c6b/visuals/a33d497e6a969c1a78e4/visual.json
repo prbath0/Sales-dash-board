@@ -1,0 +1,353 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.3.0/schema.json",
+  "name": "a33d497e6a969c1a78e4",
+  "position": {
+    "x": 143.28358208955223,
+    "y": 514.92537313432831,
+    "z": 2000,
+    "height": 204.47761194029849,
+    "width": 1137.3134328358208,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Columns": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Retailer_Details"
+                    }
+                  },
+                  "Property": "TerritoryDescription"
+                }
+              },
+              "queryRef": "Retailer_Details.TerritoryDescription",
+              "nativeQueryRef": "TerritoryDescription",
+              "active": true
+            }
+          ]
+        },
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Retailer_Details"
+                    }
+                  },
+                  "Property": "RetailerCategory"
+                }
+              },
+              "queryRef": "Retailer_Details.RetailerCategory",
+              "nativeQueryRef": "RetailerCategory",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Retailer_Details"
+                    }
+                  },
+                  "Property": "RetailerClass"
+                }
+              },
+              "queryRef": "Retailer_Details.RetailerClass",
+              "nativeQueryRef": "RetailerClass",
+              "active": false
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Retailer_Details"
+                    }
+                  },
+                  "Property": "RetailerType"
+                }
+              },
+              "queryRef": "Retailer_Details.RetailerType",
+              "nativeQueryRef": "RetailerType",
+              "active": false
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Retailer_Details"
+                    }
+                  },
+                  "Property": "RetailerName"
+                }
+              },
+              "queryRef": "Retailer_Details.RetailerName",
+              "nativeQueryRef": "RetailerName",
+              "active": false
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Target_Retailer"
+                        }
+                      },
+                      "Property": "SalesDiscountValue"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Target_Retailer.SalesDiscountValue)",
+              "nativeQueryRef": "Sum of SalesDiscountValue"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Target_Retailer"
+                        }
+                      },
+                      "Property": "SelableReturnValue"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Target_Retailer.SelableReturnValue)",
+              "nativeQueryRef": "Sum of SelableReturnValue"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Target_Retailer"
+                        }
+                      },
+                      "Property": "NonSelableReturnValue"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Target_Retailer.NonSelableReturnValue)",
+              "nativeQueryRef": "Sum of NonSelableReturnValue"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Target_Retailer"
+                        }
+                      },
+                      "Property": "RDSalesTargetValue"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Target_Retailer.RDSalesTargetValue)",
+              "nativeQueryRef": "Sum of RDSalesTargetValue"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Target_Retailer"
+                        }
+                      },
+                      "Property": "RDNetSalesValue"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Target_Retailer.RDNetSalesValue)",
+              "nativeQueryRef": "Sum of RDNetSalesValue"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Target_Retailer"
+                      }
+                    },
+                    "Property": "NonSelableReturnValue"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "Retailer_Details.RetailerCategory"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Retailer_Details"
+                    }
+                  },
+                  "Property": "RetailerCategory"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "Retailer_Details.RetailerClass"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Retailer_Details"
+                    }
+                  },
+                  "Property": "RetailerClass"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "Retailer_Details.RetailerType"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Retailer_Details"
+                    }
+                  },
+                  "Property": "RetailerType"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "Retailer_Details.RetailerName"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Retailer_Details"
+                    }
+                  },
+                  "Property": "RetailerName"
+                }
+              }
+            ],
+            "isPinned": true
+          }
+        ],
+        "root": {}
+      }
+    ],
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "layout": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Compact'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'None'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,647 @@
+table Master_Executive_Details
+	lineageTag: c2331137-5588-4e24-9267-54bf2a33b9ea
+
+	column RecID
+		dataType: int64
+		formatString: 0
+		lineageTag: 40df69a8-be86-4044-ab88-64194ebb04b0
+		summarizeBy: count
+		sourceColumn: RecID
+
+		annotation SummarizationSetBy = Automatic
+
+	column BusinessUnit
+		dataType: string
+		lineageTag: 255a1779-59a4-40b9-91bc-66e153287da3
+		summarizeBy: none
+		sourceColumn: BusinessUnit
+
+		annotation SummarizationSetBy = Automatic
+
+	column ExecutiveCode
+		dataType: string
+		lineageTag: e85bb7cf-bc5a-45b7-850c-5ad7d106d2da
+		summarizeBy: none
+		sourceColumn: ExecutiveCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ExecutiveName
+		dataType: string
+		lineageTag: e4ba7581-72f4-4def-858d-a1129385e45d
+		summarizeBy: none
+		sourceColumn: ExecutiveName
+
+		annotation SummarizationSetBy = Automatic
+
+	column OperationType
+		dataType: string
+		lineageTag: 6fdddad9-cc0b-4b09-ac3f-f5f461b26ec3
+		summarizeBy: none
+		sourceColumn: OperationType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Password
+		dataType: string
+		lineageTag: a0806d8a-61eb-4a7b-89fc-8ee15ad1dd2c
+		summarizeBy: none
+		sourceColumn: Password
+
+		annotation SummarizationSetBy = Automatic
+
+	column DefaultSalesCategoryCode
+		dataType: string
+		lineageTag: a16fc51a-1534-4bd5-8939-68334ec1f0e9
+		summarizeBy: none
+		sourceColumn: DefaultSalesCategoryCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column DefaultSalesWarehouse
+		dataType: string
+		lineageTag: 975ad46e-ee83-4d0d-b454-74c21c8fb54b
+		summarizeBy: none
+		sourceColumn: DefaultSalesWarehouse
+
+		annotation SummarizationSetBy = Automatic
+
+	column DefaultSalesLocation
+		dataType: string
+		lineageTag: 61c0b7ce-ee96-44f5-818d-77e22815d187
+		summarizeBy: none
+		sourceColumn: DefaultSalesLocation
+
+		annotation SummarizationSetBy = Automatic
+
+	column ExecutiveGroup
+		dataType: string
+		lineageTag: cd472062-b8e2-4f82-9945-f824d5043be1
+		summarizeBy: none
+		sourceColumn: ExecutiveGroup
+
+		annotation SummarizationSetBy = Automatic
+
+	column AuthorityLevel
+		dataType: string
+		lineageTag: f1cf8433-8778-4b6c-bc05-5b34d3b5914a
+		summarizeBy: none
+		sourceColumn: AuthorityLevel
+
+		annotation SummarizationSetBy = Automatic
+
+	column PrimaryTerritoryCode
+		dataType: string
+		lineageTag: bc2cd556-fe35-47c2-818c-551a812d5d10
+		summarizeBy: none
+		sourceColumn: PrimaryTerritoryCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Province
+		dataType: string
+		lineageTag: 83b74667-755b-4c56-8a25-ec6df6e25e26
+		summarizeBy: none
+		sourceColumn: Province
+
+		annotation SummarizationSetBy = Automatic
+
+	column District
+		dataType: string
+		lineageTag: 0c4b6079-e1cb-4c8f-a19e-e2968de5283d
+		summarizeBy: none
+		sourceColumn: District
+
+		annotation SummarizationSetBy = Automatic
+
+	column Territory
+		dataType: string
+		lineageTag: 0feac1d2-021b-48db-af52-5a461460b812
+		summarizeBy: none
+		sourceColumn: Territory
+
+		annotation SummarizationSetBy = Automatic
+
+	column PasswordReset
+		dataType: string
+		lineageTag: 37d06f51-60f6-49eb-a471-aabb80d431a1
+		summarizeBy: none
+		sourceColumn: PasswordReset
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastRetailerNo
+		dataType: double
+		lineageTag: 95a0523c-2825-4cc0-8a64-4115f313f81c
+		summarizeBy: sum
+		sourceColumn: LastRetailerNo
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Path
+		dataType: string
+		lineageTag: 7ca16934-60fe-48ac-a748-4b35cb6e2db8
+		summarizeBy: none
+		sourceColumn: Path
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreditLimitValidation
+		dataType: string
+		lineageTag: 40f4db05-94a5-4249-8dde-c3e1470f4f98
+		summarizeBy: none
+		sourceColumn: CreditLimitValidation
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreditLimit
+		dataType: double
+		lineageTag: 8866a49c-b68e-44fa-93c2-9ff71eda0909
+		summarizeBy: sum
+		sourceColumn: CreditLimit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PasswordExpiry
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1ae79620-6843-4d12-8965-52ea67910a4c
+		summarizeBy: none
+		sourceColumn: PasswordExpiry
+
+		variation Variation
+			isDefault
+			relationship: 4360f1fd-aff2-451b-b40c-d49f8cb876ef
+			defaultHierarchy: LocalDateTable_b284ae03-65cf-484a-811c-1086974277f1.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column BankingFrequency
+		dataType: int64
+		formatString: 0
+		lineageTag: fff9d6cc-09de-4990-ac26-c81e1caa91fb
+		summarizeBy: sum
+		sourceColumn: BankingFrequency
+
+		annotation SummarizationSetBy = Automatic
+
+	column SurveyActiveDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 75145334-f791-443e-8d5b-8e8fc0a45dd1
+		summarizeBy: none
+		sourceColumn: SurveyActiveDate
+
+		variation Variation
+			isDefault
+			relationship: 274bb244-c7d0-4a7f-a5c4-b4278f79679d
+			defaultHierarchy: LocalDateTable_282dda92-6f4a-45a1-a870-704da46db02a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column SurveyRecurrence
+		dataType: string
+		lineageTag: baa9932b-356e-4c75-a95d-a2a70e654ee6
+		summarizeBy: none
+		sourceColumn: SurveyRecurrence
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastSurveyDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ad10e331-906b-480f-a0ee-0304d298b391
+		summarizeBy: none
+		sourceColumn: LastSurveyDate
+
+		variation Variation
+			isDefault
+			relationship: af6311a8-1c87-47a7-88ef-325fb3cab9cc
+			defaultHierarchy: LocalDateTable_280bef36-7965-4c38-9446-896e9ea57b60.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column CashLimit
+		dataType: double
+		lineageTag: 30411245-08a0-4110-b569-49fa4aacb930
+		summarizeBy: sum
+		sourceColumn: CashLimit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LastGRNNo
+		dataType: double
+		lineageTag: e0339969-1952-4ef8-811b-5707a182bc8c
+		summarizeBy: sum
+		sourceColumn: LastGRNNo
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LastOrderNo
+		dataType: double
+		lineageTag: d06aa97a-a16e-4ed5-8db5-ba6d18c89dac
+		summarizeBy: sum
+		sourceColumn: LastOrderNo
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CreatedOn
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d2d33976-a6e2-4f5a-a260-cedc237caa07
+		summarizeBy: none
+		sourceColumn: CreatedOn
+
+		variation Variation
+			isDefault
+			relationship: f78829ad-a2cf-49b8-a696-c4912c0e7f21
+			defaultHierarchy: LocalDateTable_82bfd29b-86b8-4b10-9eac-ba9427d563c9.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedBy
+		dataType: string
+		lineageTag: a31b4d6b-6ca8-440e-8747-6fb7d990ec09
+		summarizeBy: none
+		sourceColumn: CreatedBy
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedOn
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d44ac96c-9f1a-4a5f-88ae-2e358f489fba
+		summarizeBy: none
+		sourceColumn: UpdatedOn
+
+		variation Variation
+			isDefault
+			relationship: adb5b110-e657-47cf-b259-3b284e7f0da5
+			defaultHierarchy: LocalDateTable_015610d7-ad3d-4263-bb83-94b8e0e9c7b1.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedBy
+		dataType: string
+		lineageTag: 0e7d0ffc-61de-4846-abb6-c17aa13761d4
+		summarizeBy: none
+		sourceColumn: UpdatedBy
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: fd21fdb5-0a06-4628-a479-20826b3bcee2
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column DefaultStockWarehouse
+		dataType: string
+		lineageTag: eec00eb4-aede-4c9c-8d3a-13348b9ebf0e
+		summarizeBy: none
+		sourceColumn: DefaultStockWarehouse
+
+		annotation SummarizationSetBy = Automatic
+
+	column DefaultStockLocation
+		dataType: string
+		lineageTag: 612a5bab-b491-4c3a-9ad8-f32e6a03621e
+		summarizeBy: none
+		sourceColumn: DefaultStockLocation
+
+		annotation SummarizationSetBy = Automatic
+
+	column DefaultReturnWarehouse
+		dataType: string
+		lineageTag: ba1f32bb-6ece-4690-9990-0e53680a4b01
+		summarizeBy: none
+		sourceColumn: DefaultReturnWarehouse
+
+		annotation SummarizationSetBy = Automatic
+
+	column DefaultReturnLocation
+		dataType: string
+		lineageTag: f1aa6119-e5cf-4edb-81df-80ed7f0382ba
+		summarizeBy: none
+		sourceColumn: DefaultReturnLocation
+
+		annotation SummarizationSetBy = Automatic
+
+	column DefaultInspectionWarehouse
+		dataType: string
+		lineageTag: 2398dead-ef88-4ff1-a372-1e25c831c9dc
+		summarizeBy: none
+		sourceColumn: DefaultInspectionWarehouse
+
+		annotation SummarizationSetBy = Automatic
+
+	column DefaultInspectionLocation
+		dataType: string
+		lineageTag: 40e5f61a-cd06-42a0-81d3-26ebbea9904b
+		summarizeBy: none
+		sourceColumn: DefaultInspectionLocation
+
+		annotation SummarizationSetBy = Automatic
+
+	column StockTerritoryCode
+		dataType: string
+		lineageTag: d92bb773-6776-4dd2-91d6-663340b1b638
+		summarizeBy: none
+		sourceColumn: StockTerritoryCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column DefaultSpecialWarehouse
+		dataType: string
+		lineageTag: 7e9e3b03-7f52-4863-bfdf-bd0141495530
+		summarizeBy: none
+		sourceColumn: DefaultSpecialWarehouse
+
+		annotation SummarizationSetBy = Automatic
+
+	column DefaultSpecialLocation
+		dataType: string
+		lineageTag: 0eab10cb-088a-4132-b4a7-7f74db366ab8
+		summarizeBy: none
+		sourceColumn: DefaultSpecialLocation
+
+		annotation SummarizationSetBy = Automatic
+
+	column DownloadStatus
+		dataType: string
+		lineageTag: 721253dd-0564-4a7d-9cb7-51720c1cb2d7
+		summarizeBy: none
+		sourceColumn: DownloadStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column DownloadDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5b264a0a-b025-4915-a836-9209723a4637
+		summarizeBy: none
+		sourceColumn: DownloadDate
+
+		variation Variation
+			isDefault
+			relationship: c570df85-0c6d-40fe-a836-227624dc49ab
+			defaultHierarchy: LocalDateTable_01b01670-0bd2-47a6-bbfb-4e6be34477e4.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column FieldProIntPath
+		dataType: string
+		lineageTag: 61cb4c02-1b02-4633-a1cd-de2276e65e81
+		summarizeBy: none
+		sourceColumn: FieldProIntPath
+
+		annotation SummarizationSetBy = Automatic
+
+	column FieldProIntRemotePath
+		dataType: string
+		lineageTag: 0261af69-c20f-44bd-a643-c8b531829e3a
+		summarizeBy: none
+		sourceColumn: FieldProIntRemotePath
+
+		annotation SummarizationSetBy = Automatic
+
+	column HierachyType
+		dataType: string
+		lineageTag: 3e3f914d-195b-4dc4-91e2-948eadf2be15
+		summarizeBy: none
+		sourceColumn: HierachyType
+
+		annotation SummarizationSetBy = Automatic
+
+	column RecipientNumbers
+		dataType: string
+		lineageTag: 65ceb35d-2588-4a11-9000-fd013fc8bd2b
+		summarizeBy: none
+		sourceColumn: RecipientNumbers
+
+		annotation SummarizationSetBy = Automatic
+
+	column DefaulEmptyTransactionCategory
+		dataType: string
+		lineageTag: 94a70f72-cef3-4f78-ba2b-7a1f0a279272
+		summarizeBy: none
+		sourceColumn: DefaulEmptyTransactionCategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column IncentiveSchemeGroup
+		dataType: string
+		lineageTag: 1a3bd87b-843a-423e-aa9e-eaa5ea831eb2
+		summarizeBy: none
+		sourceColumn: IncentiveSchemeGroup
+
+		annotation SummarizationSetBy = Automatic
+
+	column EncryptedPassword
+		dataType: string
+		lineageTag: 4143d36d-9b96-4fc4-85ab-6c79ff6fbb63
+		summarizeBy: none
+		sourceColumn: EncryptedPassword
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserLocked
+		dataType: string
+		lineageTag: f6de0b0c-9764-4fa8-a9cf-787283f2d288
+		summarizeBy: none
+		sourceColumn: UserLocked
+
+		annotation SummarizationSetBy = Automatic
+
+	column LockedBy
+		dataType: string
+		lineageTag: 51a9cfe8-f59c-4697-8183-3ed8dcdd89a2
+		summarizeBy: none
+		sourceColumn: LockedBy
+
+		annotation SummarizationSetBy = Automatic
+
+	column LockedOn
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c37a8912-ebe1-45c5-b7d5-3d8423ecf40f
+		summarizeBy: none
+		sourceColumn: LockedOn
+
+		variation Variation
+			isDefault
+			relationship: 74f985a6-299f-4856-b0b7-f76cdedb8287
+			defaultHierarchy: LocalDateTable_b849c3db-2b5e-4036-bdb0-0ce06bc54bf6.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserName
+		dataType: string
+		lineageTag: 5db5f833-870d-4c84-9a1d-f4028b56f48f
+		summarizeBy: none
+		sourceColumn: UserName
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserID
+		dataType: string
+		lineageTag: a4e15ff4-3ba5-4d49-8ec9-a441e4f87efd
+		summarizeBy: none
+		sourceColumn: UserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column RetailerCreationType
+		dataType: string
+		lineageTag: 2a1b5dbc-4104-498f-bbff-35a19e0f1342
+		summarizeBy: none
+		sourceColumn: RetailerCreationType
+
+		annotation SummarizationSetBy = Automatic
+
+	column DeviceIMEINumber
+		dataType: string
+		lineageTag: 65a4d202-7cd2-46a6-a9c0-96c229f8e486
+		summarizeBy: none
+		sourceColumn: DeviceIMEINumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column ValidateIMEINumber
+		dataType: string
+		lineageTag: 2a1d8507-6012-4b1d-b61f-157d27f69567
+		summarizeBy: none
+		sourceColumn: ValidateIMEINumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column Vehicle
+		dataType: string
+		lineageTag: ee6a030c-0e84-42e9-a635-7cff00d26654
+		summarizeBy: none
+		sourceColumn: Vehicle
+
+		annotation SummarizationSetBy = Automatic
+
+	column AutoTMRouteCode
+		dataType: string
+		lineageTag: 6395ee03-d8b5-4f4d-9b3b-0e25f32bb5cc
+		summarizeBy: none
+		sourceColumn: AutoTMRouteCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column TMPSACodePrefix
+		dataType: string
+		lineageTag: 9519fccc-daf6-4125-883f-f2195ee37901
+		summarizeBy: none
+		sourceColumn: TMPSACodePrefix
+
+		annotation SummarizationSetBy = Automatic
+
+	column NextTMPSANo
+		dataType: int64
+		formatString: 0
+		lineageTag: e2ed7ae2-b9a3-44eb-943a-7e96a031ecd4
+		summarizeBy: sum
+		sourceColumn: NextTMPSANo
+
+		annotation SummarizationSetBy = Automatic
+
+	column AllowPriceChange
+		dataType: string
+		lineageTag: 704c77d8-ba63-4537-9a43-b671d6a76da2
+		summarizeBy: none
+		sourceColumn: AllowPriceChange
+
+		annotation SummarizationSetBy = Automatic
+
+	column RecipientEmailAddress
+		dataType: string
+		lineageTag: d84e181b-41b2-49be-b664-08c0b1d377bb
+		summarizeBy: none
+		sourceColumn: RecipientEmailAddress
+
+		annotation SummarizationSetBy = Automatic
+
+	column ApplicationType
+		dataType: string
+		lineageTag: c4066cd2-3a70-44b8-ad6e-aa680ecc1e8b
+		summarizeBy: none
+		sourceColumn: ApplicationType
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnloadingWarehouse
+		dataType: string
+		lineageTag: 9e4a7f71-9af2-4055-84d9-93257ca187a5
+		summarizeBy: none
+		sourceColumn: UnloadingWarehouse
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnloadingLocation
+		dataType: string
+		lineageTag: 336ddbe6-6c3c-4181-b8ef-eacf2d7679b2
+		summarizeBy: none
+		sourceColumn: UnloadingLocation
+
+		annotation SummarizationSetBy = Automatic
+
+	column CashCustomerOnly
+		dataType: string
+		lineageTag: aebecf8b-d612-4ccb-a74a-76431d971301
+		summarizeBy: none
+		sourceColumn: CashCustomerOnly
+
+		annotation SummarizationSetBy = Automatic
+
+	column OnlineExecutive
+		dataType: string
+		lineageTag: 580d6297-b524-4ea3-9553-40090335655b
+		summarizeBy: none
+		sourceColumn: OnlineExecutive
+
+		annotation SummarizationSetBy = Automatic
+
+	column GISExecutive
+		dataType: string
+		lineageTag: fca594a3-2372-4cc0-8091-61024de397c9
+		summarizeBy: none
+		sourceColumn: GISExecutive
+
+		annotation SummarizationSetBy = Automatic
+
+	column Area
+		dataType: string
+		lineageTag: 88e5b260-0bd6-42d0-b34f-0f3507a17d3a
+		summarizeBy: none
+		sourceColumn: Area
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Master_Executive_Details = m
+		mode: import
+		queryGroup: Details
+		source =
+				let
+				    Source = Sql.Database("202.124.186.120", "XONTVenturaUserSNWA", [Query="SELECT #(lf)       E.[RecID],#(lf)       E.[BusinessUnit],#(lf)       E.[ExecutiveCode],#(lf)       E.[ExecutiveName],#(lf)       E.[OperationType],#(lf)       E.[Password],#(lf)       E.[DefaultSalesCategoryCode],#(lf)       E.[DefaultSalesWarehouse],#(lf)       E.[DefaultSalesLocation],#(lf)       E.[ExecutiveGroup],#(lf)       E.[AuthorityLevel],#(lf)       E.[PrimaryTerritoryCode],#(lf)#(tab)   A.[ParentMasterGroupValueDescription] AS [Area],#(lf)       E.[PasswordReset],#(lf)       E.[LastRetailerNo],#(lf)       E.[Path],#(lf)       E.[CreditLimitValidation],#(lf)       E.[CreditLimit],#(lf)       E.[PasswordExpiry],#(lf)       E.[BankingFrequency],#(lf)       E.[SurveyActiveDate],#(lf)       E.[SurveyRecurrence],#(lf)       E.[LastSurveyDate],#(lf)       E.[CashLimit],#(lf)       E.[LastGRNNo],#(lf)       E.[LastOrderNo],#(lf)       E.[CreatedOn],#(lf)       E.[CreatedBy],#(lf)       E.[UpdatedOn],#(lf)       E.[UpdatedBy],#(lf)       E.[Status],#(lf)       E.[TimeStamp],#(lf)       E.[DefaultStockWarehouse],#(lf)       E.[DefaultStockLocation],#(lf)       E.[DefaultReturnWarehouse],#(lf)       E.[DefaultReturnLocation],#(lf)       E.[DefaultInspectionWarehouse],#(lf)       E.[DefaultInspectionLocation],#(lf)       E.[StockTerritoryCode],#(lf)       E.[DefaultSpecialWarehouse],#(lf)       E.[DefaultSpecialLocation],#(lf)       E.[DownloadStatus],#(lf)       E.[DownloadDate],#(lf)       E.[FieldProIntPath],#(lf)       E.[FieldProIntRemotePath],#(lf)       E.[HierachyType],#(lf)       E.[RecipientNumbers],#(lf)       E.[DefaulEmptyTransactionCategory],#(lf)       E.[IncentiveSchemeGroup],#(lf)       E.[EncryptedPassword],#(lf)       E.[UserLocked],#(lf)       E.[LockedBy],#(lf)       E.[LockedOn],#(lf)       E.[UserName],#(lf)       E.[UserID],#(lf)       E.[RetailerCreationType],#(lf)       E.[DeviceIMEINumber],#(lf)       E.[ValidateIMEINumber],#(lf)       E.[Vehicle],#(lf)       E.[AutoTMRouteCode],#(lf)       E.[TMPSACodePrefix],#(lf)       E.[NextTMPSANo],#(lf)       E.[AllowPriceChange],#(lf)       E.[RecipientEmailAddress],#(lf)       E.[ApplicationType],#(lf)       E.[UnloadingWarehouse],#(lf)       E.[UnloadingLocation],#(lf)    #(lf)       E.[CashCustomerOnly],#(lf)       E.[OnlineExecutive],#(lf)       E.[GISExecutive],#(lf)       #(lf)       -- New columns for Province, District, and Territory#(lf)       P.[MasterGroupValueDescription] AS [Province],#(lf)       D.[MasterGroupValueDescription] AS [District],#(lf)       T.[MasterGroupValueDescription] AS [Territory]#(lf)#(lf)       #(lf)FROM [XONTVenturaUserSNWA].[RD].[Executive] AS E#(lf)#(lf)-- Join for Province#(lf)LEFT JOIN [XONTVenturaUserSNWA].[XA].[MasterDefinitionValue] AS P#(lf)    ON E.[PrimaryTerritoryCode] = P.[MasterGroupValue]#(lf)   AND P.[MasterGroup] = 'PROVINCE'#(lf)   #(lf)-- Join for District#(lf)LEFT JOIN [XONTVenturaUserSNWA].[XA].[MasterDefinitionValue] AS D#(lf)    ON E.[PrimaryTerritoryCode] = D.[MasterGroupValue]#(lf)   AND D.[MasterGroup] = 'DISTRK'#(lf)   #(lf)-- Join for Territory#(lf)LEFT JOIN [XONTVenturaUserSNWA].[XA].[MasterDefinitionValue] AS T#(lf)    ON E.[PrimaryTerritoryCode] = T.[MasterGroupValue]#(lf)   AND T.[MasterGroup] = 'TETY'#(lf)#(lf)   -- Join for Territory#(lf)LEFT JOIN [XONTVenturaUserSNWA].[XA].[MasterDefinitionValue] AS A#(lf)    ON E.[PrimaryTerritoryCode] = A.[MasterGroupValue]#(lf)   AND A.[MasterGroup] = 'TETY'#(lf)   AND A.[ParentMasterGroup] = 'AREA'#(lf)#(lf)", HierarchicalNavigation=true, MultiSubnetFailover=true])
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

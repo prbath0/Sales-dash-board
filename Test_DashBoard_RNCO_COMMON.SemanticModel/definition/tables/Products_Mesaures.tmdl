@@ -1,0 +1,81 @@
+table Products_Mesaures
+	lineageTag: bc127e03-92d2-431e-a0ca-3a2c6daa7d1d
+
+	measure 'Parameter Value 3' = SELECTEDVALUE('Products_Mesaures'[Parameter])
+		formatString: 0
+		lineageTag: fb457c47-df93-4eb6-8c5e-2fa02d5daad9
+
+	measure Product_Sales_Achievement_Percentage = ```
+			
+			 
+			    DIVIDE(
+			        SUM(Target_Executive[RDNetSalesQty]),
+			        SUM(Target_Executive[RDSalesTargetQty]),
+			        0
+			    ) * 100
+			
+			
+			```
+		lineageTag: bfa46e51-ebca-4206-982b-da3e05beef67
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Average_Sales_Per_Product = ```
+			
+			AVERAGEX(
+			    VALUES(Target_Executive[ProductCode]),
+			    [Cumulative Net Sales]
+			)
+			
+			```
+		lineageTag: 07f185ab-2590-49b9-b215-32560c38a030
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Product_Returns_Percentage = ```
+			
+			 
+			    DIVIDE(
+			        SUM(Target_Executive[RDSalesReturnValue]),
+			        [Cumulative Net Sales],
+			        0
+			    ) 
+			
+			
+			```
+		formatString: #,0
+		lineageTag: 08bcb631-dcb6-4549-891e-83b01e8ac5dd
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Last Year This Month Sales Qty' =
+			
+			CALCULATE(
+			    SUM(Target_Executive[RDNetSalesQty]), -- Replace with your sales achieved value column
+			    SAMEPERIODLASTYEAR(Date_Table_02[Date])
+			)
+		lineageTag: 70467667-554f-4b0f-9994-7d1319d48181
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Parameter
+		dataType: int64
+		formatString: 0
+		lineageTag: 8c0485f6-6304-4019-b970-421396a7ef49
+		summarizeBy: none
+		isDataTypeInferred
+		sourceColumn: [Value]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 0
+				}
+
+		annotation SummarizationSetBy = User
+
+	partition Products_Mesaures = calculated
+		mode: import
+		source = GENERATESERIES(0, 20, 1)
+
+	annotation PBI_Id = 18547dd4a6624ab5b76bcd4aaa04874c
+

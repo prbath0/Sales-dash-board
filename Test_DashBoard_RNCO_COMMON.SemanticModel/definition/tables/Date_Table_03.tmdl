@@ -1,0 +1,93 @@
+table Date_Table_03
+	lineageTag: 6d4afe84-ddc4-49df-900e-7ca346d8e3b9
+
+	measure 'Parameter Value 2' = SELECTEDVALUE('Products_Mesaures'[Parameter])
+		formatString: 0
+		lineageTag: 05363142-eaf4-4f51-b376-7acedccf7213
+
+	column Date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5912d9b6-bfff-46d0-b2de-fc2a6eddbd2a
+		summarizeBy: none
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [Date]
+
+		variation Variation
+			isDefault
+			relationship: 163db57d-05a6-4cad-9719-6c82ef4d6879
+			defaultHierarchy: LocalDateTable_e8a324eb-9777-4e9e-8ea5-c12617f6ea03.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: f518adb5-aa71-444d-8db3-b32436c1171d
+		summarizeBy: sum
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 78f3d278-a417-44ba-9996-0d8252310cbf
+		summarizeBy: sum
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [Month]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Day
+		dataType: int64
+		formatString: 0
+		lineageTag: ddf524ff-c08e-46c0-884a-5cddb17bb6af
+		summarizeBy: sum
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [Day]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Weekday
+		dataType: int64
+		formatString: 0
+		lineageTag: 27e0e50a-7ffa-48d6-adfb-5902f858e10b
+		summarizeBy: sum
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [Weekday]
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsPoya
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 5167831e-58d1-486e-9315-fc1a0d8f02a4
+		summarizeBy: none
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [IsPoya]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Date_Table_03 = calculated
+		mode: import
+		source =
+				
+				ADDCOLUMNS (
+				    CALENDAR (DATE(2024, 1, 1), DATE(2026, 12, 31)),  -- Adjust date range as needed
+				    "Year", YEAR([Date]),
+				    "Month", MONTH([Date]),
+				    "Day", DAY([Date]),
+				    "Weekday", WEEKDAY([Date], 2),  -- 2 makes Monday = 1 and Sunday = 7
+				    "IsPoya", IF([Date] IN {DATE(2024, 1, 25), DATE(2024, 2, 23),DATE(2024, 3, 08),DATE(2024, 3, 29),DATE(2024, 4, 23),DATE(2024, 5,01 ),DATE(2024, 5, 23),DATE(2024, 5, 24),DATE(2024, 6, 17),DATE(2024, 6, 21),DATE(2024, 7, 20),DATE(2024, 7, 20),DATE(2024, 7, 27),DATE(2024, 8, 19),DATE(2024, 8, 17) }, TRUE(), FALSE())  -- List of Poya days
+				)
+
+	annotation PBI_Id = 4efc079516e14d9d97c7b480f66a9728
+

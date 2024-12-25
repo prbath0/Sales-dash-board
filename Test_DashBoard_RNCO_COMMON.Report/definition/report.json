@@ -1,0 +1,208 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/1.2.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY24SU10",
+      "reportVersionAtImport": "5.59",
+      "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "AccessibleDefault",
+      "reportVersionAtImport": "5.59",
+      "type": "SharedResources"
+    }
+  },
+  "layoutOptimization": "PhonePortrait",
+  "objects": {
+    "section": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "publicCustomVisuals": [
+    "RoseDonutPiechart762B562BE2774F939Fvdsfdsf1FfasfD1F32D91sdw",
+    "Sunburst1445472000808",
+    "ScrollingTextVisual1448795304508",
+    "WordCloud1447959067750",
+    "htmlContent443BE3AD55E043BF878BED274D3A6855"
+  ],
+  "resourcePackages": [
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY24SU10",
+          "path": "BaseThemes/CY24SU10.json",
+          "type": "BaseTheme"
+        },
+        {
+          "name": "AccessibleDefault",
+          "path": "BuiltInThemes/AccessibleDefault.json",
+          "type": "CustomTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "project7405849649819531.png",
+          "path": "project7405849649819531.png",
+          "type": "Image"
+        },
+        {
+          "name": "filter8830606836151129.png",
+          "path": "filter8830606836151129.png",
+          "type": "Image"
+        },
+        {
+          "name": "cancel5973972367008276.png",
+          "path": "cancel5973972367008276.png",
+          "type": "Image"
+        },
+        {
+          "name": "street-map50697549282756.png",
+          "path": "street-map50697549282756.png",
+          "type": "Image"
+        },
+        {
+          "name": "building3060604820896957.png",
+          "path": "building3060604820896957.png",
+          "type": "Image"
+        },
+        {
+          "name": "arrow07334975921520881.png",
+          "path": "arrow07334975921520881.png",
+          "type": "Image"
+        },
+        {
+          "name": "home-page49881266604403596.png",
+          "path": "home-page49881266604403596.png",
+          "type": "Image"
+        },
+        {
+          "name": "filter_(1)3000456721532978.png",
+          "path": "filter_(1)3000456721532978.png",
+          "type": "Image"
+        },
+        {
+          "name": "cancel1192193417910965.png",
+          "path": "cancel1192193417910965.png",
+          "type": "Image"
+        },
+        {
+          "name": "calendar3058238083036837.png",
+          "path": "calendar3058238083036837.png",
+          "type": "Image"
+        },
+        {
+          "name": "chain9801413274991038.png",
+          "path": "chain9801413274991038.png",
+          "type": "Image"
+        },
+        {
+          "name": "clock-shop15481657831159934.png",
+          "path": "clock-shop15481657831159934.png",
+          "type": "Image"
+        },
+        {
+          "name": "market08848934760316274.png",
+          "path": "market08848934760316274.png",
+          "type": "Image"
+        },
+        {
+          "name": "budgeting3075086798906812.png",
+          "path": "budgeting3075086798906812.png",
+          "type": "Image"
+        },
+        {
+          "name": "target_(1)06225671798614374.png",
+          "path": "target_(1)06225671798614374.png",
+          "type": "Image"
+        },
+        {
+          "name": "sales_(1)3640614312758559.png",
+          "path": "sales_(1)3640614312758559.png",
+          "type": "Image"
+        },
+        {
+          "name": "navi48678713883325002.png",
+          "path": "navi48678713883325002.png",
+          "type": "Image"
+        },
+        {
+          "name": "navi52584798226258176.png",
+          "path": "navi52584798226258176.png",
+          "type": "Image"
+        },
+        {
+          "name": "offer_(1)3126894736959347.png",
+          "path": "offer_(1)3126894736959347.png",
+          "type": "Image"
+        },
+        {
+          "name": "exchange14709693503296917.png",
+          "path": "exchange14709693503296917.png",
+          "type": "Image"
+        },
+        {
+          "name": "free-delivery04610601655846458.png",
+          "path": "free-delivery04610601655846458.png",
+          "type": "Image"
+        },
+        {
+          "name": "street-map08418036778876026.png",
+          "path": "street-map08418036778876026.png",
+          "type": "Image"
+        },
+        {
+          "name": "navi66606202117164368.png",
+          "path": "navi66606202117164368.png",
+          "type": "Image"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "defaultDrillFilterOtherVisuals": true,
+    "allowChangeFilterTypes": true,
+    "useEnhancedTooltips": true,
+    "useScaledTooltips": true,
+    "useDefaultAggregateDisplayName": true,
+    "enableDeveloperMode": true,
+    "customMemoryLimit": "1048576",
+    "customTimeoutLimit": "225"
+  },
+  "slowDataSourceSettings": {
+    "isCrossHighlightingDisabled": false,
+    "isSlicerSelectionsButtonEnabled": false,
+    "isFilterSelectionsButtonEnabled": false,
+    "isFieldWellButtonEnabled": false,
+    "isApplyAllButtonEnabled": false
+  }
+}

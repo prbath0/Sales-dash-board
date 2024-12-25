@@ -1,0 +1,76 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+/// Product
+/// geo
+/// executive
+queryGroup Details
+
+	annotation PBI_QueryGroupOrder = 0
+
+annotation PBI_QueryOrder = ["Target_Executive","Product_Details","Product_Classification","Master_Definition_Value","Master_Executive_Details","Query1","Date_Table","Productive calls","Map_Table","Retailer_Details","Target_Retailer","Target_Executive_Duplicate","Bill_Count"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.137.1102.0 (24.10)
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Target_Executive
+ref table DateTableTemplate_3da8c6f9-149b-4578-bc7e-f1eee62cb5ea
+ref table LocalDateTable_e06cdb95-2193-4707-b78e-869858232dc4
+ref table Product_Details
+ref table LocalDateTable_f91cf435-e86b-41d5-a7ef-05cfbe91a556
+ref table LocalDateTable_7e20bbcb-187c-4e65-b6da-bf59cb94a884
+ref table LocalDateTable_e43e1518-ed47-4bec-829c-befa8da7733a
+ref table LocalDateTable_f131463d-fbdd-4e23-b3c2-ad5a73c9313a
+ref table LocalDateTable_b92797c6-4929-4ae1-85c6-46d38fdc5428
+ref table LocalDateTable_58ceae9a-85e2-4aa7-b65d-dfdbcb6cbd6d
+ref table LocalDateTable_91a46210-e15a-402c-b909-dab9987a3254
+ref table Product_Classification
+ref table LocalDateTable_f2fc64e5-504d-4804-8893-550245604fb9
+ref table LocalDateTable_15e40edc-c714-427d-9d2f-2f6e0aa1d066
+ref table Master_Definition_Value
+ref table LocalDateTable_7747f333-b42b-4455-9da6-2bf62a40a439
+ref table LocalDateTable_a81d152b-f087-496a-bffd-965773537508
+ref table LocalDateTable_7816fe50-b31e-4820-becd-6da05a3fef16
+ref table Master_Executive_Details
+ref table LocalDateTable_b284ae03-65cf-484a-811c-1086974277f1
+ref table LocalDateTable_282dda92-6f4a-45a1-a870-704da46db02a
+ref table LocalDateTable_280bef36-7965-4c38-9446-896e9ea57b60
+ref table LocalDateTable_82bfd29b-86b8-4b10-9eac-ba9427d563c9
+ref table LocalDateTable_015610d7-ad3d-4263-bb83-94b8e0e9c7b1
+ref table LocalDateTable_01b01670-0bd2-47a6-bbfb-4e6be34477e4
+ref table LocalDateTable_b849c3db-2b5e-4036-bdb0-0ce06bc54bf6
+ref table Date_Table
+ref table LocalDateTable_950c91dc-e746-4d67-ab2b-1586599aa4aa
+ref table LocalDateTable_bf0b0c97-c341-41c1-8d82-bcfca60c12aa
+ref table Sales_Measure
+ref table Date_Table_02
+ref table 'Productive calls'
+ref table Map_Table
+ref table LocalDateTable_6c791bbe-b411-41cf-a59f-d697def2eda4
+ref table LocalDateTable_4ab8f582-d55b-4970-84f4-7da6570e620e
+ref table LocalDateTable_ca865386-7030-4b34-98e2-41fface83fcb
+ref table Retailer_Details
+ref table LocalDateTable_824f2a09-343d-4bd6-983b-633995174ba1
+ref table LocalDateTable_a17f99e3-d561-43cc-b4fb-ebaffc505da6
+ref table LocalDateTable_858b6381-7c9e-48f6-8f57-e4a38c1e5192
+ref table LocalDateTable_a8b2ef22-7dda-47cf-948d-ae3dfcb7c55f
+ref table LocalDateTable_994dcc16-a4c0-496b-bc62-52f42407c3d8
+ref table Target_Retailer
+ref table LocalDateTable_b5c1a72c-d415-453e-90f6-ce739637477d
+ref table Date_Table_03
+ref table Target_Executive_Duplicate
+ref table LocalDateTable_7029ba8b-4d9c-4bd0-88c7-770f2ca9852a
+ref table Bill_Count
+ref table LocalDateTable_e8a324eb-9777-4e9e-8ea5-c12617f6ea03
+ref table Products_Mesaures
+
+ref cultureInfo en-US
+

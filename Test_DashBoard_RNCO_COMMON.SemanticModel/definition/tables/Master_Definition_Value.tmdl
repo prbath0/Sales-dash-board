@@ -1,0 +1,342 @@
+table Master_Definition_Value
+	lineageTag: 02238762-663f-4876-9ec8-2dad8d8adbda
+
+	column RecordID
+		dataType: int64
+		formatString: 0
+		lineageTag: ce7ea7a7-bfda-4f3d-b6dc-3bfaab45a45a
+		summarizeBy: count
+		sourceColumn: RecordID
+
+		annotation SummarizationSetBy = Automatic
+
+	column BusinessUnit
+		dataType: string
+		lineageTag: 3fc7d2a9-59a9-4216-a7b8-9aa48c87547c
+		summarizeBy: none
+		sourceColumn: BusinessUnit
+
+		annotation SummarizationSetBy = Automatic
+
+	column MasterGroup
+		dataType: string
+		lineageTag: a8336f32-97a3-4aa4-9bce-b750eb74dc3a
+		summarizeBy: none
+		sourceColumn: MasterGroup
+
+		annotation SummarizationSetBy = Automatic
+
+	column MasterGroupValue
+		dataType: string
+		lineageTag: 220695e2-f539-43e7-bbe3-4907b4f3b7eb
+		summarizeBy: none
+		sourceColumn: MasterGroupValue
+
+		annotation SummarizationSetBy = Automatic
+
+	column MasterGroupValueDescription
+		dataType: string
+		lineageTag: 3a7db726-a467-4495-bffb-0f29ea46af98
+		summarizeBy: none
+		sourceColumn: MasterGroupValueDescription
+
+		annotation SummarizationSetBy = Automatic
+
+	column MasterGroupLevel
+		dataType: int64
+		formatString: 0
+		lineageTag: 9e8cd753-41fd-4450-a23c-b0e66cdc1c5e
+		summarizeBy: sum
+		sourceColumn: MasterGroupLevel
+
+		annotation SummarizationSetBy = Automatic
+
+	column ParentMasterGroup
+		dataType: string
+		lineageTag: df1407b3-9493-4e0f-815d-619216a6778d
+		summarizeBy: none
+		sourceColumn: ParentMasterGroup
+
+		annotation SummarizationSetBy = Automatic
+
+	column ParentMasterGroupValue
+		dataType: string
+		lineageTag: ff8dc258-61c3-4b1d-bdfe-df86f6e4a15e
+		summarizeBy: none
+		sourceColumn: ParentMasterGroupValue
+
+		annotation SummarizationSetBy = Automatic
+
+	column ParentMasterGroupValueDescription
+		dataType: string
+		lineageTag: 12efa267-881f-49df-89b3-3833ef932b55
+		summarizeBy: none
+		sourceColumn: ParentMasterGroupValueDescription
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: f287d8a7-ece7-45ad-a782-acbc7ae1f7c7
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column GroupType
+		dataType: string
+		lineageTag: f15e3a86-4477-4bdf-8971-ab796844ce36
+		summarizeBy: none
+		sourceColumn: GroupType
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedOn
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 40a4c062-d126-4224-958c-d0d7041d4351
+		summarizeBy: none
+		sourceColumn: CreatedOn
+
+		variation Variation
+			isDefault
+			relationship: 08bf2003-2614-402d-84b3-024bdbe43a3e
+			defaultHierarchy: LocalDateTable_7747f333-b42b-4455-9da6-2bf62a40a439.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedBy
+		dataType: string
+		lineageTag: 651e88c9-d50a-406c-9db3-579851cce9b9
+		summarizeBy: none
+		sourceColumn: CreatedBy
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedOn
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 272dec8f-42b5-4013-beff-83fd17b77346
+		summarizeBy: none
+		sourceColumn: UpdatedOn
+
+		variation Variation
+			isDefault
+			relationship: 7174e287-25bb-49c9-8ac6-d78244f5c96d
+			defaultHierarchy: LocalDateTable_a81d152b-f087-496a-bffd-965773537508.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedBy
+		dataType: string
+		lineageTag: 616e241f-f345-4a59-a98d-808b38372b46
+		summarizeBy: none
+		sourceColumn: UpdatedBy
+
+		annotation SummarizationSetBy = Automatic
+
+	column MasterGroupValueLimit
+		dataType: int64
+		formatString: 0
+		lineageTag: 53daa2a1-5489-4d81-823b-be1a090293a9
+		summarizeBy: sum
+		sourceColumn: MasterGroupValueLimit
+
+		annotation SummarizationSetBy = Automatic
+
+	column PriceGroupType
+		dataType: string
+		lineageTag: caa106cd-4b20-49a6-9e6b-73388dc26777
+		summarizeBy: none
+		sourceColumn: PriceGroupType
+
+		annotation SummarizationSetBy = Automatic
+
+	column ImageAvailable
+		dataType: string
+		lineageTag: 15f323be-6833-47b4-bf90-8f8e27c34199
+		summarizeBy: none
+		sourceColumn: ImageAvailable
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastImageUpdatedOn
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ad2315fd-3691-4d13-9e1c-56be3906d014
+		summarizeBy: none
+		sourceColumn: LastImageUpdatedOn
+
+		variation Variation
+			isDefault
+			relationship: af9cda0f-a588-4ba5-b31c-3eb7622320a2
+			defaultHierarchy: LocalDateTable_7816fe50-b31e-4820-becd-6da05a3fef16.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column SortSequenceint
+		dataType: int64
+		formatString: 0
+		lineageTag: 3d40408c-3129-45aa-93bf-2d59871ab695
+		summarizeBy: sum
+		sourceColumn: SortSequenceint
+
+		annotation SummarizationSetBy = Automatic
+
+	column SortSequence
+		dataType: int64
+		formatString: 0
+		lineageTag: 2396ed05-2fcb-48e9-8400-1ab0774b82ef
+		summarizeBy: sum
+		sourceColumn: SortSequence
+
+		annotation SummarizationSetBy = Automatic
+
+	column ImagePath
+		dataType: string
+		lineageTag: 38fa4a7d-1017-4463-b9ab-e5603bf4d889
+		summarizeBy: none
+		sourceColumn: ImagePath
+
+		annotation SummarizationSetBy = Automatic
+
+	column Color
+		dataType: int64
+		formatString: 0
+		lineageTag: a1bc9d3f-844e-435b-8216-1dc34acf67eb
+		summarizeBy: sum
+		sourceColumn: Color
+
+		annotation SummarizationSetBy = Automatic
+
+	column PriceGroup
+		dataType: string
+		lineageTag: e329701f-34cf-4d7b-b6de-f870ef3af755
+		summarizeBy: none
+		sourceColumn: PriceGroup
+
+		annotation SummarizationSetBy = Automatic
+
+	column TradeSchemeGroup
+		dataType: string
+		lineageTag: 290323cb-1137-4525-ba71-b4964754f345
+		summarizeBy: none
+		sourceColumn: TradeSchemeGroup
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserDefinedField1
+		dataType: string
+		lineageTag: 1ca93950-138b-444e-946e-ee2c426b9ab9
+		summarizeBy: none
+		sourceColumn: UserDefinedField1
+
+		annotation SummarizationSetBy = Automatic
+
+	column UDF1Description
+		dataType: string
+		lineageTag: e160bd29-83be-44b4-b575-9c7474b4476f
+		summarizeBy: none
+		sourceColumn: UDF1Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserDefinedField2
+		dataType: string
+		lineageTag: 2f384b52-24ca-4468-8832-de4d5e9cefed
+		summarizeBy: none
+		sourceColumn: UserDefinedField2
+
+		annotation SummarizationSetBy = Automatic
+
+	column UDF2Description
+		dataType: string
+		lineageTag: 3139a74e-208e-4c8a-adf9-8d5da921a19f
+		summarizeBy: none
+		sourceColumn: UDF2Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserDefinedField3
+		dataType: string
+		lineageTag: 1fc2a920-2945-4955-9731-4302cbdb7671
+		summarizeBy: none
+		sourceColumn: UserDefinedField3
+
+		annotation SummarizationSetBy = Automatic
+
+	column UDF3Description
+		dataType: string
+		lineageTag: 8a28f9d1-3657-4341-9bfb-a8ec74a9b679
+		summarizeBy: none
+		sourceColumn: UDF3Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserDefinedField4
+		dataType: double
+		lineageTag: b916a1a6-91b6-49d1-8e04-abe314747313
+		summarizeBy: sum
+		sourceColumn: UserDefinedField4
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column UDF4Description
+		dataType: string
+		lineageTag: 0929cdd1-a4f4-42fd-9efd-43314efab8b3
+		summarizeBy: none
+		sourceColumn: UDF4Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserDefinedField5
+		dataType: double
+		lineageTag: 8b45595d-d5c1-437d-b150-6ee9e0c3f4dd
+		summarizeBy: sum
+		sourceColumn: UserDefinedField5
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column UDF5Description
+		dataType: string
+		lineageTag: 4566d4c4-ccc4-4bd7-a13f-3f1f9cdf0233
+		summarizeBy: none
+		sourceColumn: UDF5Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column VisitSequence
+		dataType: int64
+		formatString: 0
+		lineageTag: 75957024-8483-4556-aba0-2be594e7a0a3
+		summarizeBy: sum
+		sourceColumn: VisitSequence
+
+		annotation SummarizationSetBy = Automatic
+
+	column PDALoad
+		dataType: string
+		lineageTag: ac95d7d1-9815-468d-a444-abea58efcd39
+		summarizeBy: none
+		sourceColumn: PDALoad
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Master_Definition_Value = m
+		mode: import
+		queryGroup: Details
+		source =
+				let
+				    Source = Sql.Database("202.124.186.120", "XONTVenturaUserSNWA", [Query="SELECT #(lf)       [RecordID]#(lf)      ,[BusinessUnit]#(lf)      ,[MasterGroup]#(lf)      ,[MasterGroupValue]#(lf)      ,[MasterGroupValueDescription]#(lf)      ,[MasterGroupLevel]#(lf)      ,[ParentMasterGroup]#(lf)      ,[ParentMasterGroupValue]#(lf)      ,[ParentMasterGroupValueDescription]#(lf)      ,[Status]#(lf)      ,[GroupType]#(lf)      ,[CreatedOn]#(lf)      ,[CreatedBy]#(lf)      ,[UpdatedOn]#(lf)      ,[UpdatedBy]#(lf)      ,[TimeStamp]#(lf)      ,[MasterGroupValueLimit]#(lf)      ,[PriceGroupType]#(lf)      ,[ImageAvailable]#(lf)      ,[LastImageUpdatedOn]#(lf)      ,[SortSequenceint]#(lf)      ,[SortSequence]#(lf)      ,[ImagePath]#(lf)      ,[Color]#(lf)      ,[PriceGroup]#(lf)      ,[TradeSchemeGroup]#(lf)      ,[UserDefinedField1]#(lf)      ,[UDF1Description]#(lf)      ,[UserDefinedField2]#(lf)      ,[UDF2Description]#(lf)      ,[UserDefinedField3]#(lf)      ,[UDF3Description]#(lf)      ,[UserDefinedField4]#(lf)      ,[UDF4Description]#(lf)      ,[UserDefinedField5]#(lf)      ,[UDF5Description]#(lf)      ,[VisitSequence]#(lf)      ,[PDALoad]#(lf)  FROM [XONTVenturaUserSNWA].[XA].[MasterDefinitionValue]#(lf)", HierarchicalNavigation=true, MultiSubnetFailover=true]),
+				    #"Filtered Rows" = Table.SelectRows(Source, each ([MasterGroup] = "TETY    "))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

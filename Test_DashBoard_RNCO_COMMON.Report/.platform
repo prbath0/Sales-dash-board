@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Test_DashBoard_RNCO_COMMON"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "9ba6bad1-35a2-4640-b51d-9ed1900ea995"
+  }
+}

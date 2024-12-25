@@ -1,0 +1,163 @@
+table Map_Table
+	lineageTag: 58e46c7f-13a0-4236-b95b-431bc2a5f531
+
+	column RecID
+		dataType: int64
+		formatString: 0
+		lineageTag: 2e81d0fc-a9b6-4b36-a0f7-fd0acd89ca4d
+		summarizeBy: count
+		sourceColumn: RecID
+
+		annotation SummarizationSetBy = Automatic
+
+	column BusinessUnit
+		dataType: string
+		lineageTag: cb5ceb81-99a4-400f-8e19-922585e439a7
+		summarizeBy: none
+		sourceColumn: BusinessUnit
+
+		annotation SummarizationSetBy = Automatic
+
+	column TerritoryCode
+		dataType: string
+		lineageTag: 7118455f-8f82-41e5-b377-e0d834085c34
+		summarizeBy: none
+		sourceColumn: TerritoryCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ExecutiveCode
+		dataType: string
+		lineageTag: fde94b33-e524-4bd0-b3b9-852fa8516326
+		summarizeBy: none
+		sourceColumn: ExecutiveCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column RetailerCode
+		dataType: string
+		lineageTag: e5edd6cf-d90b-449f-a12c-1245638ba450
+		summarizeBy: none
+		sourceColumn: RetailerCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column InvoiceDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: cd796e2a-5d98-46a2-bd2d-522a970d00ca
+		summarizeBy: none
+		sourceColumn: InvoiceDate
+
+		variation Variation
+			isDefault
+			relationship: e486512f-901e-444f-9349-1b718f9df181
+			defaultHierarchy: LocalDateTable_ca865386-7030-4b34-98e2-41fface83fcb.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 93ea8fa1-1662-41e7-a97c-8f99faf05328
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalHeaderDiscountValue
+		dataType: double
+		lineageTag: 18eb4446-3da2-40b6-8d3e-031b71f2ef9a
+		summarizeBy: sum
+		sourceColumn: TotalHeaderDiscountValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TotalLineDiscountValue
+		dataType: double
+		lineageTag: 4bb4face-2ad4-4d2f-a38c-500802532d58
+		summarizeBy: sum
+		sourceColumn: TotalLineDiscountValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TotalSpecialDiscountValue
+		dataType: double
+		lineageTag: ff14eb07-ed91-48b1-a3c4-a832fdbe9817
+		summarizeBy: sum
+		sourceColumn: TotalSpecialDiscountValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TotalOtherDiscountValue
+		dataType: double
+		lineageTag: 1131b796-050a-484c-9b0b-41f1c23ef91c
+		summarizeBy: sum
+		sourceColumn: TotalOtherDiscountValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TotalInvoiceValue
+		dataType: double
+		lineageTag: c506f45f-fda6-4b60-8ca0-0dfc30c63730
+		summarizeBy: sum
+		sourceColumn: TotalInvoiceValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CreatedOn
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a9d434ee-8907-4c37-973e-93ef176e814d
+		summarizeBy: none
+		sourceColumn: CreatedOn
+
+		variation Variation
+			isDefault
+			relationship: 77fcd965-b098-4f09-b34a-d803ced2f3bf
+			defaultHierarchy: LocalDateTable_6c791bbe-b411-41cf-a59f-d697def2eda4.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Longitude
+		dataType: double
+		lineageTag: f59ee9ea-b627-46d1-944d-ad8cd76e1e82
+		summarizeBy: none
+		sourceColumn: Longitude
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Latitude
+		dataType: double
+		lineageTag: 58b1fb1d-c748-49ad-bdd7-49f121a3fcae
+		summarizeBy: none
+		sourceColumn: Latitude
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Map_Table = m
+		mode: import
+		queryGroup: Details
+		source =
+				let
+				    Source = Sql.Database("202.124.186.120", "XONTVenturaUserSNWA", [Query="SELECT        RecID, BusinessUnit, TerritoryCode, ExecutiveCode, RetailerCode, InvoiceDate, Status, TotalHeaderDiscountValue, TotalLineDiscountValue, TotalSpecialDiscountValue, TotalOtherDiscountValue, TotalInvoiceValue, #(lf)                         CreatedOn, Longitude, Latitude#(lf)FROM            RD.SalesInvoiceHeader#(lf)WHERE        (Status = '1')#(lf)ORDER BY InvoiceDate", HierarchicalNavigation=true, MultiSubnetFailover=true])
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

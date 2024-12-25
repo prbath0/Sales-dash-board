@@ -1,0 +1,124 @@
+table Product_Classification
+	lineageTag: 3bdd7aea-c8c1-4241-88c3-df34d19e3170
+
+	column BusinessUnit
+		dataType: string
+		lineageTag: 98a06675-14c0-49f0-b72b-e26bcde1b977
+		summarizeBy: none
+		sourceColumn: BusinessUnit
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductCode
+		dataType: string
+		lineageTag: 750d9222-ff16-450d-b8bc-71e91e77033e
+		summarizeBy: none
+		sourceColumn: ProductCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column MasterGroup
+		dataType: string
+		lineageTag: b58b6003-0833-4622-b3cb-ed9e8060944a
+		summarizeBy: none
+		sourceColumn: MasterGroup
+
+		annotation SummarizationSetBy = Automatic
+
+	column MasterGroupDescription
+		dataType: string
+		lineageTag: c8298c99-49a6-4c77-99f0-97d386919fb0
+		summarizeBy: none
+		sourceColumn: MasterGroupDescription
+
+		annotation SummarizationSetBy = Automatic
+
+	column MasterGroupValue
+		dataType: string
+		lineageTag: 97938604-53f0-4e43-96af-517fc8a9f82e
+		summarizeBy: none
+		sourceColumn: MasterGroupValue
+
+		annotation SummarizationSetBy = Automatic
+
+	column MasterGroupValueDescription
+		dataType: string
+		lineageTag: 29c9b874-8164-4b80-b69c-f582e365aeae
+		summarizeBy: none
+		sourceColumn: MasterGroupValueDescription
+
+		annotation SummarizationSetBy = Automatic
+
+	column GroupType
+		dataType: string
+		lineageTag: b5d2290d-33e1-4729-8c64-75f0e9df1e3e
+		summarizeBy: none
+		sourceColumn: GroupType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 8f0a6b54-37c2-4e19-ac22-b61147954788
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedOn
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7c37b64a-d9fe-4331-8feb-7de82ea83c4d
+		summarizeBy: none
+		sourceColumn: CreatedOn
+
+		variation Variation
+			isDefault
+			relationship: eb549e51-f3ec-49ae-8a02-34f296a92ce8
+			defaultHierarchy: LocalDateTable_f2fc64e5-504d-4804-8893-550245604fb9.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedBy
+		dataType: string
+		lineageTag: 321fa030-249d-409d-87cb-a47d4244a901
+		summarizeBy: none
+		sourceColumn: CreatedBy
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedOn
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1160b689-b605-4f09-bc7f-61e6305bf2d5
+		summarizeBy: none
+		sourceColumn: UpdatedOn
+
+		variation Variation
+			isDefault
+			relationship: 7e07e6e4-d678-4331-90c1-efec1ce4ca3a
+			defaultHierarchy: LocalDateTable_15e40edc-c714-427d-9d2f-2f6e0aa1d066.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedBy
+		dataType: string
+		lineageTag: 748527bd-58f6-49ee-a74a-78fc37d87321
+		summarizeBy: none
+		sourceColumn: UpdatedBy
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Product_Classification = m
+		mode: import
+		queryGroup: Details
+		source =
+				let
+				    Source = Sql.Database("202.124.186.120", "XONTVenturaUserSNWA", [Query="SELECT #(lf)       [BusinessUnit]#(lf)      ,[ProductCode]#(lf)      ,[MasterGroup]#(lf)      ,[MasterGroupDescription]#(lf)      ,[MasterGroupValue]#(lf)      ,[MasterGroupValueDescription]#(lf)      ,[GroupType]#(lf)      ,[Status]#(lf)      ,[CreatedOn]#(lf)      ,[CreatedBy]#(lf)      ,[UpdatedOn]#(lf)      ,[UpdatedBy]#(lf)      ,[TimeStamp]#(lf)  FROM [XONTVenturaUserSNWA].[RD].[ProductClassification]#(lf)  WHERE [MasterGroup] = 'ALTNSEAR'", HierarchicalNavigation=true, MultiSubnetFailover=true])
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

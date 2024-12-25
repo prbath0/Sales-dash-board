@@ -1,0 +1,474 @@
+table Sales_Measure
+	lineageTag: 4316931e-5013-4483-8ac3-9cd9a1f9ca33
+
+	measure 'Parameter Value' = SELECTEDVALUE('Sales_Measure'[Parameter])
+		formatString: 0
+		lineageTag: 99b32b2e-1f30-424f-b69e-dc40cec59726
+
+	measure 'Total Sales Target Value' = ```
+			
+			SUM(Target_Executive[RDSalesTargetValue])
+			
+			```
+		lineageTag: 9a807a4c-c2c1-481d-9978-d7ab66cd3ea4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Cumulative Net Sales' = ```
+			
+			CALCULATE(
+			    SUM('Target_Executive'[RDNetSalesValue]),
+			    FILTER(
+			        ALLSELECTED('Date_Table_02'),
+			        'Date_Table_02'[Date] <= MAX('Date_Table_02'[Date])
+			    )
+			)
+			
+			```
+		lineageTag: 5fb31295-0a73-40bd-a70c-d3d1b0aadb1a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Sales Return Value' = ```
+			
+			SUM(Target_Executive[RDSalesReturnValue])
+			
+			```
+		lineageTag: e267aa45-9e4b-4e83-9dfe-6c7ed1b33a71
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure IsWeekday
+		lineageTag: 86f05e79-5ae9-4baa-9bdd-6f4f185bfdaf
+
+	measure TotalWorkingDays = ```
+			
+			CALCULATE (
+			    COUNTROWS ( 'Date_Table_03' ),
+			    Date_Table_03[Year] = YEAR(TODAY()),  -- Only current year
+			    Date_Table_03[Month] = MONTH(TODAY()),  -- Only current month
+			    Date_Table_03[Weekday] <= 6,       -- Exclude Sundays
+			    Date_Table_03[IsPoya] = FALSE()    -- Exclude Poya days
+			)
+			
+			
+			
+			```
+		formatString: 0
+		lineageTag: 6f24ceca-de6f-4b97-bdf4-e3edffdb7432
+
+	measure WorkingDaysToDate = ```
+			
+			CALCULATE (
+			    COUNTROWS ( 'Date_Table_03' ),
+			    Date_Table_03[Date] <= TODAY(),    -- Up to today's date
+			    Date_Table_03[Year] = YEAR(TODAY()),  -- Only current year
+			    Date_Table_03[Month] = MONTH(TODAY()),  -- Only current month
+			    Date_Table_03[Weekday] <= 6,       -- Exclude Sundays
+			    Date_Table_03[IsPoya] = FALSE()    -- Exclude Poya days
+			)
+			
+			
+			
+			```
+		formatString: 0
+		lineageTag: dc41fec1-3e8f-4513-8b79-1357e3d98567
+
+	measure 'Working Day Percentage' = ```
+			
+			DIVIDE(
+			    [TotalWorkingDays] - [WorkingDaysToDate],
+			    [TotalWorkingDays],
+			    0
+			)
+			
+			```
+		formatString: 0%;-0%;0%
+		lineageTag: 456abbcb-c9d9-4207-a07d-dedacb18d22a
+
+	measure 'Working Days Passed (Current Month)' = ```
+			
+			 [TotalWorkingDays]-[WorkingDaysToDate]
+			
+			
+			```
+		formatString: 0
+		lineageTag: 5ecd0e20-ef8f-42b6-b90e-cbfaad1942c4
+
+	measure 'Run Rate (Passed Days)' = ```
+			
+			
+			    IF(
+			        [Working Days Passed (Current Month)] > 0,
+			                    [Cumulative Net Sales] / [Working Days Passed (Current Month)],
+			        0
+			    )
+			
+			```
+		lineageTag: be0143b5-cf77-4fa1-9731-dae09e6087c1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Required Run Rate (Passed Days)' = ```
+			
+			
+			    IF(
+			        [Working Days Passed (Current Month)] > 0,
+			        [Total Sales Target Value] / [TotalWorkingDays],
+			        0
+			    )
+			
+			```
+		lineageTag: eb52fec3-7660-4de8-a431-82686a75a152
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure LastMonthSales = ```
+			
+			CALCULATE(
+			    [Cumulative Net Sales],
+			    MONTH(Date_Table_02[Date]) = MONTH(TODAY()) - 1,
+			    YEAR(Date_Table_02[Date]) = YEAR(TODAY())
+			)
+			
+			```
+		lineageTag: 9459a9d8-689d-4c31-a370-8f93d92c0e9a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Sales_Growth =
+			
+			CALCULATE
+			( DIVIDE( ([Cumulative Net Sales] - [Last Year This Month Sales]),[Last Year This Month Sales]))
+		formatString: 0%;-0%;0%
+		lineageTag: dccfe83d-0985-490c-973f-808104d2a9bc
+
+	measure SalesGrowth_LastThreeMonths = ```
+			
+			DIVIDE(
+			    [Cumulative Net Sales] - [Sales_Growth],
+			    [Sales_Growth],
+			    0
+			)
+			
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: cf76a50b-c9ce-45dd-b8b0-1d2fd849fe6e
+
+	measure 'Balance To Go Sale' = CALCULATE( [Total Sales Target Value] - [Cumulative Net Sales])
+		lineageTag: 0043f3e2-7e66-4c9a-8439-8978bbcd99d5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Target vs Netsale Precentage' = ```
+			CALCULATE( DIVIDE([Cumulative Net Sales] , [Total Sales Target Value] )) 
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: ce2c2293-bae8-45f3-b553-b925f4dcbb08
+
+	measure 'Productive Calls to Date' =
+			
+			CALCULATE(
+			    COUNTROWS('Productive Calls'),
+			    'Productive calls'[InvoiceDate] <= TODAY()
+			)
+		formatString: 0
+		lineageTag: 036baf26-696a-4121-8eda-86bee0fe6b4c
+
+	measure 'Cumulative Net Sales to Date' = ```
+			
+			CALCULATE(
+			    SUM('Target_Executive'[RDNetSalesValue]),
+			    FILTER(
+			        ALL('Target_Executive'),
+			        'Target_Executive'[CreatedOn] <= TODAY()
+			    )
+			)
+			
+			```
+		lineageTag: 5f75f0c7-c84b-4798-a258-b2397d0d00a9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Discount' = ```
+			
+			SUM(Target_Executive[SalesDiscountValue])
+			
+			```
+		lineageTag: 8d3847f1-529f-4e20-bd2f-00137973feb3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Last Year This Month Sales' = ```
+			
+			CALCULATE(
+			    SUM(Target_Executive[RDNetSalesValue]), -- Replace with your sales achieved value column
+			    SAMEPERIODLASTYEAR(Date_Table_02[Date])
+			)
+			
+			```
+		lineageTag: 7458b886-38e6-4e87-a73d-fb74b691f1e8
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Return' =
+			
+			SUM(Target_Executive[RDSalesReturnValue])
+		lineageTag: 0a9c61b9-0535-42d2-bd2c-3666b56097d9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Last Year Total Discount' = ```
+			
+			CALCULATE(
+			    [Total Discount], -- Replace with your discount column
+			    PARALLELPERIOD(Date_Table_02[Date], -1, YEAR)
+			)
+			
+			```
+		lineageTag: e53f61eb-4a79-4baf-979d-7adc88bc6342
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Last Year Total return' =
+			
+			CALCULATE(
+			    [Total Return], -- Replace with your discount column
+			    PARALLELPERIOD(Date_Table_02[Date], -1, MONTH)
+			)
+		lineageTag: 5cc880ed-4f11-420a-bafa-dfd1fa9e869a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Outlets' = COUNT(Retailer_Details[RetailerCode])
+		formatString: 0
+		lineageTag: dd127767-51ac-494e-8a0e-d963666e1d43
+
+	measure 'Outlet Reach' = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT(Target_Retailer[RetailerCode]),
+			    (Target_Retailer[RDNetSalesValue] > 0 || Target_Retailer[ReturnFreeValue] > 0),
+			    DATESMTD('Date_Table_02'[Date])
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 9cc0ddf6-cbc2-4363-be6b-bd2ca248d3cd
+
+	measure 'Last Year This Month Sales for retailers' =
+			
+			CALCULATE(
+			    SUM(Target_Retailer[RDNetSalesValue]), -- Replace with your sales achieved value column
+			    SAMEPERIODLASTYEAR(Date_Table_02[Date])
+			)
+		lineageTag: 0838f848-36d1-4e4f-8159-2fb783095276
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Outlet Reach Last Month' = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT(Target_Retailer[RetailerCode]),
+			    (Target_Retailer[RDNetSalesValue] > 0 || Target_Retailer[ReturnFreeValue] > 0),
+			    PREVIOUSMONTH('Date_Table_02'[Date])
+			)
+			
+			```
+		formatString: 0
+		lineageTag: cd6a1604-d9fb-4094-8585-778b0a158f03
+
+	measure 'Total Discount For visual' = ```
+			
+			SUM(Target_Executive_Duplicate[SalesDiscountValue])
+			
+			```
+		lineageTag: 3ace09ec-b5f5-460b-a14a-85cbba5a77b6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Return for Visual' =
+			
+			SUM(Target_Executive_Duplicate[RDSalesReturnValue])
+		lineageTag: a49a2035-ee96-45b5-a692-3a36f94960f7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Discount Last Year' = ```
+			
+			CALCULATE(
+			    SUM(Target_Executive_Duplicate[SalesDiscountValue]),
+			    PARALLELPERIOD('Date_Table_03'[Date], -12, MONTH)   -- Shift the date context by 12 months
+			)
+			
+			```
+		lineageTag: 37a6ed61-b2f2-4b05-b612-dbd67a0310ce
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Last Year Total Return for Visual' =
+			
+			CALCULATE(
+			    [Total Return for Visual], -- Replace with your discount column
+			    PARALLELPERIOD(Date_Table_03[Date], -1, MONTH)
+			)
+		lineageTag: 0230983e-9d38-4856-b58d-c9d60cc8fc49
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Last Year This Month Sales for Visual' = ```
+			
+			CALCULATE(
+			    SUM(Target_Executive_Duplicate[RDNetSalesValue]), ---- Replace with your sales achieved value 
+			    PARALLELPERIOD(Date_Table_03[Date], -1, MONTH)
+			)
+			
+			```
+		lineageTag: 5e4a9956-3fc9-43e7-81c9-01d20f6a80be
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Bill Count' = CALCULATE(SUM(Bill_Count[TotalBillCount]))
+		formatString: 0
+		lineageTag: 23ca45f7-e44e-4438-9dc7-242ae54f5a9a
+
+	measure 'Bill count HTML' = ```
+			"
+			<head>
+			    <link
+			        rel=""stylesheet"" 
+			        href=""https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css""/>
+			</head>
+			<br>
+			<h1 class=""animate__animated animate__bounce"" style=""text-align:center;"">" 
+			    & CALCULATE(SUM(Bill_Count[TotalBillCount])) 
+			    & "</h1>
+			"
+			
+			```
+		lineageTag: 9c554873-b062-4c6d-880f-c2b1a68d2980
+
+	measure ModernNavBarHTML = ```
+			
+			"<div style='
+			    width: 1254px; 
+			    height: 83px; 
+			    background-color: #1D243C; 
+			    display: flex; 
+			    justify-content: space-between; 
+			    align-items: center; 
+			    border-radius: 8px; 
+			    font-family: Arial, sans-serif; 
+			    color: #FFFFFF; 
+			    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);'>
+			
+			    <!-- Left Section: Icon and Dashboard Name -->
+			    <div style='display: flex; align-items: center; padding-left: 20px;'>
+			        <div style='
+			            width: 40px; 
+			            height: 40px; 
+			            background-color: #ffffff; 
+			            border-radius: 50%; 
+			            display: flex; 
+			            justify-content: center; 
+			            align-items: center; 
+			            margin-right: 15px;'>
+			            <!-- Dashboard Icon (using a Font Awesome chart icon) -->
+			            <i class='fas fa-chart-line' style='font-size: 20px; color: #1D243C;'></i> 
+			        </div>
+			        <div style='font-size: 18px; font-weight: bold;'>
+			            Sales Insight Dashboard
+			        </div>
+			    </div>
+			
+			    <!-- Center Section: Company Name -->
+			    <div style='font-size: 16px; font-weight: 500;'>
+			        Edinborough Products (Pvt) Ltd
+			    </div>
+			
+			    <!-- Right Section: Page Name -->
+			    <div style='padding-right: 20px; font-size: 16px;'>
+			        Sales Summary Page
+			    </div>
+			</div>"
+			
+			
+			```
+		lineageTag: 1603f80d-ad9e-43ce-b406-c95b59a5b253
+
+	measure 'Forcast Sale' = ```
+			
+			CALCULATE(
+			    [Last Year This Month Sales] * ( 1 + [Sales_Growth] ) )
+			
+			
+			
+			
+			```
+		lineageTag: 203d6e94-7407-4ba4-8956-d8167087f738
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Button_Text_Hover_NetSale_GEOPage = ```
+			
+			VAR Space = " "
+			VAR CardWith = 30
+			VAR KPI1_Text = "Sales Forcast: " &  FORMAT([Forcast Sale], "0,,M")
+			VAR KPI2_Text = "Balance To Go: " & FORMAT([Balance To Go Sale], "0,,M")
+			VAR KPI3_Text = "Sales Growth : " & FORMAT([Sales_Growth], "Percent")
+			VAR KPI4_Text = "Sales Forcast: " & FORMAT([Forcast Sale], "0,,M" )
+			
+			VAR KPI1_NumberSpace = CardWith - LEN(KPI1_Text)
+			VAR KPI2_NumberSpace = CardWith - LEN(KPI2_Text)
+			VAR KPI3_NumberSpace = CardWith - LEN(KPI3_Text)
+			
+			VAR Summary_Text =
+			KPI1_Text & REPT(Space,KPI1_NumberSpace) &
+			KPI2_Text & REPT(Space,KPI2_NumberSpace)  &
+			KPI3_Text & REPT(Space,KPI3_NumberSpace)   &
+			KPI4_Text
+			RETURN
+			  Summary_Text
+			
+			
+			
+			
+			
+			
+			
+			```
+		lineageTag: ba96081f-6a78-4ade-8a24-c26c579aad65
+
+	measure 'Forecast Sales All Months' = ```
+			
+			SUMX(
+			    VALUES('Date_Table'[Month Name]),
+			    CALCULATE([Last Year This Month Sales] * (1 + [Sales_Growth]))
+			)
+			
+			```
+		lineageTag: c0579c54-660e-4810-b4e4-dd22da8c946c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Parameter
+		dataType: int64
+		formatString: 0
+		lineageTag: 16516d5b-cfb8-483d-bf57-5fe163c8c342
+		summarizeBy: none
+		isDataTypeInferred
+		sourceColumn: [Value]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 0
+				}
+
+		annotation SummarizationSetBy = User
+
+	partition Sales_Measure = calculated
+		mode: import
+		source = GENERATESERIES(0, 20, 1)
+
+	annotation PBI_Id = b4c9d5a2d8154160bcf45707f113867c
+

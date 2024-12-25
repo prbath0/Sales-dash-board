@@ -1,0 +1,101 @@
+table Date_Table_02
+	lineageTag: 1564e927-9373-474a-ad8e-767f8743f2fa
+
+	column Date
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: bf97e97b-2297-43d4-a24c-d9bac9a0d059
+		summarizeBy: none
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [Date]
+
+		variation Variation
+			isDefault
+			relationship: 8a90b16f-4ee9-4113-8d5d-2e8f465a518f
+			defaultHierarchy: LocalDateTable_4ab8f582-d55b-4970-84f4-7da6570e620e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 26711ce1-44a3-4081-bc0f-4f02fd1bfd56
+		summarizeBy: sum
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: d4a7ef45-793a-4194-adbc-4268dce5d2e7
+		summarizeBy: sum
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [Month]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthName
+		dataType: string
+		lineageTag: 6f569875-59f5-4bb5-ae5e-a64d8ef515ef
+		summarizeBy: none
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [MonthName]
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsWeekday
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 98a207bb-60b0-4359-80e0-46a8eb0c9866
+		summarizeBy: none
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [IsWeekday]
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsHoliday
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 5abf9eab-fbec-42e1-8053-ae2efd7f1bc4
+		summarizeBy: none
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [IsHoliday]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Date_Table_02 = calculated
+		mode: import
+		source = ```
+				
+				VAR StartDate = DATE(2022, 1, 1)
+				VAR EndDate = (TODAY())
+				RETURN 
+				ADDCOLUMNS(
+				    CALENDAR(StartDate, EndDate),
+				    "Year", YEAR([Date]),
+				    "Month", MONTH([Date]),
+				    "MonthName", FORMAT([Date], "MMMM"),
+				    "IsWeekday", IF(WEEKDAY([Date], 1) <> 1, TRUE, FALSE),
+				    "IsHoliday", 
+				        SWITCH(
+				            TRUE(),
+				            [Date] = DATE(2024, 1, 15), TRUE,
+				            [Date] = DATE(2024, 2, 19), TRUE,
+				            [Date] = DATE(2024, 3, 25), TRUE,   
+				            /* Add additional holiday dates here in the same format */
+				            FALSE
+				        )
+				)
+				
+				```
+
+	annotation PBI_Id = 5cb15b92726d4e3994cdb05027de72d9
+
